@@ -143,6 +143,9 @@ class Category(models.Model):
     """
     Name = models.CharField(max_length=50, null=False)
 
+class CategoriesList(models.Model):
+    Category = models.ForeignKey(Category, on_delete=models.deletion.CASCADE)
+    Product = models.ForeignKey(Product, on_delete=models.deletion.CASCADE)
 
 class Order(models.Model):
     """

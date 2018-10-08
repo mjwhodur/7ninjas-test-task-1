@@ -7,10 +7,11 @@
         This package contains example data for sample_shop application.
 """
 
-from simple_shop.shop.models import Category, Client, Currency, DeliveryAddress, DeliveryPrice,\
+from simple_shop.shop.models import Category, Client, Currency, DeliveryAddress, DeliveryPrice, \
     DeliveryType, Order, OrderPositions, Product, PriceList
 
 from random import randint, randrange
+
 
 def populate_Currency(currencies):
     """
@@ -27,6 +28,7 @@ def populate_Currency(currencies):
         currency.ExchangeRate = float(element['ExchangeRate'])
         currency.save()
 
+
 def populate_Categories(categories):
     """
 
@@ -39,6 +41,7 @@ def populate_Categories(categories):
         category = Category()
         category.Name = element['Name']
         category.save()
+
 
 def populate_Products(products):
     """
@@ -65,7 +68,7 @@ def populate_Products(products):
             price = PriceList()
             price.relatedCurrency = currency
             price.relatedProduct = product
-            price.value = randint(100,10000)
+            price.value = randint(100, 10000)
             price.save()
 
 
@@ -81,16 +84,60 @@ def populate_Delivery(deliveryTypes):
         deliveryType.Name = element['Name']
         deliveryType.save()
 
-def populate_data():
 
+def populate_data():
     try:
-        Currencies = []
+        Currencies = [
+            {
+                'Name': "Polski zloty",
+                'Mnemonic': 'PLN',
+                'ExchangeRate': 1
+            },
+            {
+                'Name': "EURO",
+                'Mnemonic': 'EUR',
+                'ExchangeRate': 0.25
+            },
+            {
+                'Name': "Pound sterling",
+                'Mnemonic': 'GBP',
+                'ExchangeRate': 0.20
+            },
+        ]
         populate_Currency(Currencies)
-        Categories = []
+        Categories = [
+            {
+                'Title' : 'Bikes'
+            },
+            {
+                'Title' : 'Hi-Fi'
+            },
+            {
+                'Title' : 'Notebooks'
+            },
+            {
+                'Title' : 'Clothing'
+            }
+        ]
         populate_Categories(Categories)
-        Deliveries = []
+        Deliveries = [
+            {
+                'Name' : 'FedEx'
+            },
+            {
+                'Name': 'DHL'
+            },
+            {
+                'Name' : 'International Postal Service'
+            },
+            {
+                'Name' : 'Own Transport'
+            }
+        ]
         populate_Delivery(Deliveries)
-        Products = []
+        Products = [
+
+        ]
         populate_Products(Products)
         print('Data populated properly.')
     except:
