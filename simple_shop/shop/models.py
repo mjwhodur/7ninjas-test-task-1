@@ -3,10 +3,17 @@ from django.db import models
 # Create your models here.
 
 class Client(models.Model):
-    pass
+    UserName = models.CharField(max_length=500)
+
 
 class DeliveryAddress(models.Model):
-    pass
+    Client = models.ForeignKey(Client, on_delete=models.deletion.CASCADE)
+    Name = models.CharField(max_length=500)
+    Street = models.CharField(max_length=200, null=True)
+    StreetNumber = models.CharField(max_length=100)
+    AptSuiteNumber = models.CharField(max_length=20, null=True)
+    PostalCode = models.CharField(max_length=10)
+    Country = models.CharField(max_length=100)
 
 
 class Product(models.Model):
