@@ -97,6 +97,7 @@ class PriceList(models.Model):
     """
     relatedProduct = models.ForeignKey(Product, on_delete=models.deletion.PROTECT)
     relatedCurrency = models.ForeignKey(Currency, on_delete=models.deletion.PROTECT)
+    value = models.FloatField(default=1)
 
 
 class DeliveryType(models.Model):
