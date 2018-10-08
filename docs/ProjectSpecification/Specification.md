@@ -1,13 +1,17 @@
+### Navigation
+[Home](../index.md) | **Task specification** | [API Specification](../API/API.md)
+
 # Task
 Description: Simple selling platform with REST support
 
 ## Task
+### Task details:
 Mid Level
 
 Write REST api for simple selling platform.
 Use Python 3.6+, Django 1.11+, DRF 3.6+, Frontend is not needed
 
-### Entities
+#### Entities
 Product:
 ```
 Title, image, description, price (both value and currency), 
@@ -25,13 +29,12 @@ Title
 
 Order
 ```text
-Product (which is ordered), user (who orders), chosen delivery, total price (product's price and delivery price)
+Product (which is ordered), user (who orders), chosen delivery, 
+total price (product's price and delivery price)
 count of products
-
 ```
 
-
-### Endpoints
+#### Endpoints
 - List of products with pagination, simple filtering by category and simple search by title of the product
 - User's wish list
 - Create new order
