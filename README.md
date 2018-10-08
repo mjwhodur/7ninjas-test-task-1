@@ -1,4 +1,7 @@
 # 7ninjas-test-task
-Zadanie testowe dla firmy 7ninjas
+PL: Zadanie testowe dla firmy 7ninjas
 
-## Treść zadania
+EN: Test task for 7ninjas Company, based in Rzeszow, Poland
+
+
+For more information regarding API of the task feel free to checkout [documentation root](docs/index.md).
