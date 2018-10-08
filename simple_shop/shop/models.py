@@ -33,6 +33,11 @@ class PriceList(models.Model):
 class DeliveryType(models.Model):
     Name = models.CharField(max_length=500)
 
+class DeliveryPrice(models.Model):
+    Name = models.CharField(max_length=500)
+    Currency = models.ForeignKey(Currency, on_delete=models.deletion.CASCADE)
+    Price = models.FloatField(default=0)
+
 class Category(models.Model):
     Name = models.CharField(max_length=50, null=False)
 
@@ -40,6 +45,7 @@ class Order(models.Model):
     Number = models.CharField(max_length=50, null=False)
     DeliveryAddress = models.ForeignKey(DeliveryAddress, on_delete=models.deletion.PROTECT)
     DeliveryType = models.ForeignKey(DeliveryType, on_delete=models.deletion.PROTECT)
+    Currency = models.ForeignKey(Currency, on_delete=models.deletion.PROTECT)
 
 class OrderPositions(models.Model):
     Order = models.ForeignKey(Order, on_delete=models.deletion.CASCADE)
