@@ -1,0 +1,3 @@
+# Requires most recent modules of Django and Django REST Framework
+django
+djangorestframework
