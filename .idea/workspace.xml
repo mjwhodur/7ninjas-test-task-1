@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa9496a3-33e5-4042-b145-c77662aaf7ad" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simple_shop/shop/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/simple_shop/shop/models.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,7 +39,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="md" value="4444" />
-          <entry key="py" value="2184" />
+          <entry key="py" value="4247" />
           <entry key="txt" value="28" />
         </counts>
       </usages-collector>
@@ -46,7 +47,7 @@
         <counts>
           <entry key="Markdown" value="4439" />
           <entry key="PLAIN_TEXT" value="33" />
-          <entry key="Python" value="2184" />
+          <entry key="Python" value="4247" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -73,18 +74,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/simple_shop/shop/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="37" column="77" selection-start-line="37" selection-start-column="77" selection-end-line="37" selection-end-column="77" />
+            <state relative-caret-position="386">
+              <caret line="72" column="51" selection-start-line="72" selection-start-column="51" selection-end-line="72" selection-end-column="51" />
               <folding>
-                <marker date="1539004291000" expanded="true" signature="85:136" ph="..." />
-                <marker date="1539004291000" expanded="true" signature="246:562" ph="..." />
-                <marker date="1539004291000" expanded="true" signature="785:925" ph="..." />
-                <marker date="1539004291000" expanded="true" signature="955:1125" ph="..." />
-                <marker date="1539004291000" expanded="true" signature="1238:1403" ph="..." />
-                <marker date="1539004291000" expanded="true" signature="1432:1489" ph="..." />
-                <marker date="1539004291000" expanded="true" signature="1515:1830" ph="..." />
-                <marker date="1539004291000" expanded="true" signature="1865:2101" ph="..." />
-                <marker date="1539004291000" expanded="true" signature="2130:2280" ph="..." />
+                <marker date="1539005934000" expanded="true" signature="568:619" ph="..." />
+                <marker date="1539005934000" expanded="true" signature="1317:1633" ph="..." />
+                <marker date="1539005934000" expanded="true" signature="2296:2436" ph="..." />
+                <marker date="1539005934000" expanded="true" signature="2583:2753" ph="..." />
+                <marker date="1539005934000" expanded="true" signature="3068:3233" ph="..." />
+                <marker date="1539005934000" expanded="true" signature="3343:3400" ph="..." />
+                <marker date="1539005934000" expanded="true" signature="3568:3883" ph="..." />
+                <marker date="1539005934000" expanded="true" signature="4042:4278" ph="..." />
               </folding>
             </state>
           </provider>
@@ -480,18 +480,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/simple_shop/shop/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="37" column="77" selection-start-line="37" selection-start-column="77" selection-end-line="37" selection-end-column="77" />
+        <state relative-caret-position="386">
+          <caret line="72" column="51" selection-start-line="72" selection-start-column="51" selection-end-line="72" selection-end-column="51" />
           <folding>
-            <marker date="1539004291000" expanded="true" signature="85:136" ph="..." />
-            <marker date="1539004291000" expanded="true" signature="246:562" ph="..." />
-            <marker date="1539004291000" expanded="true" signature="785:925" ph="..." />
-            <marker date="1539004291000" expanded="true" signature="955:1125" ph="..." />
-            <marker date="1539004291000" expanded="true" signature="1238:1403" ph="..." />
-            <marker date="1539004291000" expanded="true" signature="1432:1489" ph="..." />
-            <marker date="1539004291000" expanded="true" signature="1515:1830" ph="..." />
-            <marker date="1539004291000" expanded="true" signature="1865:2101" ph="..." />
-            <marker date="1539004291000" expanded="true" signature="2130:2280" ph="..." />
+            <marker date="1539005934000" expanded="true" signature="568:619" ph="..." />
+            <marker date="1539005934000" expanded="true" signature="1317:1633" ph="..." />
+            <marker date="1539005934000" expanded="true" signature="2296:2436" ph="..." />
+            <marker date="1539005934000" expanded="true" signature="2583:2753" ph="..." />
+            <marker date="1539005934000" expanded="true" signature="3068:3233" ph="..." />
+            <marker date="1539005934000" expanded="true" signature="3343:3400" ph="..." />
+            <marker date="1539005934000" expanded="true" signature="3568:3883" ph="..." />
+            <marker date="1539005934000" expanded="true" signature="4042:4278" ph="..." />
           </folding>
         </state>
       </provider>

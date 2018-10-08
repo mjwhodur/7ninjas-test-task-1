@@ -14,7 +14,8 @@ class Client(models.Model):
         library would be updated.
 
     Columns:
-        UserName: type of django.db.models.CharField with max length of 500 having enough
+        UserName: type of django.db.models.CharField with max length of 500 having enough space to hold user's username
+                  or i.e. key
     """
     UserName = models.CharField(max_length=500)
 
@@ -28,13 +29,13 @@ class DeliveryAddress(models.Model):
         cation address).
 
     Columns:
-        Client
-        Name
-        Street
-        StreetNumber
-        AptSuiteNumber
-        PostalCode
-        Country
+        Client: typeof django.db.models.ForeignKey
+        Name: typeof django.db.models.CharField
+        Street: typeof django.db.models.CharField
+        StreetNumber: typeof django.db.models.CharField
+        AptSuiteNumber: typeof django.db.models.CharField
+        PostalCode: typeof django.db.models.CharField
+        Country: typeof django.db.models.CharField
     """
     Client = models.ForeignKey(Client, on_delete=models.deletion.CASCADE)
     Name = models.CharField(max_length=500)
@@ -52,9 +53,9 @@ class Product(models.Model):
     Description:
 
     Columns:
-        Title
-        Image
-        Description
+        Title: typeof django.db.models.CharField
+        Image: typeof django.db.models.CharField
+        Description: typeof django.db.models.CharField
     """
     Title = models.CharField(max_length=200, null=False)
     Image = models.CharField(max_length=500, null=True)
@@ -67,9 +68,9 @@ class Currency(models.Model):
     Description:
 
     Columns:
-        Name
-        Mnemonic
-        Exchange
+        Name: typeof django.db.models.CharField
+        Mnemonic: typeof django.db.models.CharField
+        Exchange: typeof django.db.models.CharField
     """
     Name = models.CharField(max_length=500)
     Mnemonic = models.CharField(max_length=3)
