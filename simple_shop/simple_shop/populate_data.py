@@ -86,6 +86,10 @@ def populate_Delivery(deliveryTypes):
 
 
 def populate_data():
+    '''
+    This function populates database with example data
+    :return: None
+    '''
     try:
         Currencies = [
             {
@@ -107,36 +111,66 @@ def populate_data():
         populate_Currency(Currencies)
         Categories = [
             {
-                'Title' : 'Bikes'
+                'Title': 'Bikes'
             },
             {
-                'Title' : 'Hi-Fi'
+                'Title': 'Hi-Fi'
             },
             {
-                'Title' : 'Notebooks'
+                'Title': 'Computers'
             },
             {
-                'Title' : 'Clothing'
+                'Title': 'Notebooks'
+            },
+            {
+                'Title': 'Clothing'
+            },
+            {
+                'Title': 'Networking'
             }
         ]
         populate_Categories(Categories)
         Deliveries = [
             {
-                'Name' : 'FedEx'
+                'Name': 'FedEx International',
+                'Price' : [{'Value' : '100', 'Currency' : 'PLN'}]
             },
             {
-                'Name': 'DHL'
+                'Name': 'DHL',
+                'Price' : [{'Value' : '20', 'Currency' : 'PLN'}]
             },
             {
-                'Name' : 'International Postal Service'
+                'Name': 'International Postal Service (FREE)',
+                'Price' : [{'Value' : '0', 'Currency' : 'PLN'}],
             },
             {
-                'Name' : 'Own Transport'
+                'Name': 'Own Transport',
+                'Price' : [{'Value' : 0, 'Currency' : 'PLN'}, {'Value' : 100, 'Currency' : 'EUR'}]
             }
         ]
         populate_Delivery(Deliveries)
         Products = [
-
+            {
+                'Title': 'Acer Predator Helios 300',
+                'Categories': ['Computers', 'Notebooks'],
+                'Price': [{'Value': '5699', 'Currency': 'PLN'}, {'Value': '1500', 'Currency': 'EUR'},
+                          {'Value': '900', 'Currency': 'GBP'}]
+            },
+            {
+                'Title': 'Generic Bluetooth Adaptor',
+                'Categories': ['Computers', 'Networking'],
+                'Price': [{'Value': '100', 'Currency': 'PLN'}]
+            },
+            {
+                'Title': 'Generic Bicycle',
+                'Categories': ['Bikes'],
+                'Price' : [{'Value':'500', 'Currency': 'GBP'}]
+            },
+            {
+                'Title': 'Superlux HD 669',
+                'Categories': ['Computers', 'Hi-Fi'],
+                'Price' : [{'Value' : '100', 'Currency' : 'PLN'}]
+            }
         ]
         populate_Products(Products)
         print('Data populated properly.')
