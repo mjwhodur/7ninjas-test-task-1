@@ -3,3 +3,5 @@
 ## Basic repository information
 This project is intented to test my skills against Python3 and capability to cooperation with 7ninjas Company based in Rzeszow, Poland.
 
+## Task specification
+For more detailed information regarding task specification go to [Specification.md](ProjectSpecification/Specification.md)
