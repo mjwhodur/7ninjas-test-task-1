@@ -2,49 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa9496a3-33e5-4042-b145-c77662aaf7ad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ninja/panel/templates/panel_base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ninja/panel/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/7ninjas-test-task-1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/7ninjas-test-task-1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ninja/panel/validators/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ninja/panel/validators/category.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ninja/panel/validators/contractor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ninja/panel/validators/currency.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ninja/panel/validators/deliveryaddress.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ninja/panel/validators/deliverymethod.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ninja/panel/validators/order.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ninja/panel/validators/product.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ninja/panel/validators/user.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jupiter.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ninja/panel/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ninja/panel/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_shop/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_shop/api/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_shop/api/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_shop/api/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_shop/api/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_shop/api/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_shop/api/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_shop/api/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_shop/manage.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_shop/shop/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_shop/shop/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_shop/shop/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_shop/shop/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_shop/shop/migrations/0002_auto_20181008_1308.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_shop/shop/migrations/0003_auto_20181008_1312.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_shop/shop/migrations/0004_auto_20181008_1417.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_shop/shop/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_shop/shop/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_shop/shop/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_shop/shop/views/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_shop/shop/views/paint.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_shop/shop/views/registration.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_shop/simple_shop/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_shop/simple_shop/populate_data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_shop/simple_shop/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_shop/simple_shop/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_shop/simple_shop/wsgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_shop/staffzone/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_shop/staffzone/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_shop/staffzone/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_shop/staffzone/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_shop/staffzone/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_shop/staffzone/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_shop/staffzone/views.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -110,21 +78,21 @@
         <counts>
           <entry key="html" value="1" />
           <entry key="md" value="1" />
-          <entry key="py" value="3" />
+          <entry key="py" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="1" />
           <entry key="Markdown" value="1" />
-          <entry key="Python" value="3" />
+          <entry key="Python" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="58" />
           <entry key="md" value="556" />
-          <entry key="py" value="5676" />
+          <entry key="py" value="7235" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -132,7 +100,7 @@
           <entry key="CommandLine" value="2" />
           <entry key="HTML" value="58" />
           <entry key="Markdown" value="554" />
-          <entry key="Python" value="5676" />
+          <entry key="Python" value="7235" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -141,82 +109,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/API/PYTHON/modules/staff_zone.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="107" selection-start-line="107" selection-end-line="107" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="120">
-                <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/API/PYTHON/PYTHON_START.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor>
-                <caret line="22" selection-start-line="22" selection-end-line="22" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/API/KB/KB1000.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor>
-                <caret line="11" selection-start-line="11" selection-end-line="11" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/index.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="122">
-                <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ninja/panel/templates/panel_base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ninja/panel/urls.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -232,20 +124,97 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ninja/panel/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="330">
+              <caret line="51" column="22" lean-forward="true" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
               <folding>
-                <element signature="e#0#71#0" expanded="true" />
-                <marker date="1539108419072" expanded="true" signature="625:718" ph="..." />
-                <marker date="1539108419072" expanded="true" signature="4430:4512" ph="..." />
-                <marker date="1539108419072" expanded="true" signature="4651:4656" ph="..." />
-                <marker date="1539108419072" expanded="true" signature="4714:4719" ph="..." />
-                <marker date="1539108419072" expanded="true" signature="4779:4784" ph="..." />
-                <marker date="1539108419072" expanded="true" signature="4842:4847" ph="..." />
-                <marker date="1539108419072" expanded="true" signature="4993:4998" ph="..." />
-                <marker date="1539108419072" expanded="true" signature="5063:5068" ph="..." />
-                <marker date="1539108419072" expanded="true" signature="5131:5136" ph="..." />
+                <element signature="e#406#477#0" expanded="true" />
+                <marker date="1539109584060" expanded="true" signature="1037:1429" ph="..." />
+                <marker date="1539109584060" expanded="true" signature="5487:5569" ph="..." />
+                <marker date="1539109584060" expanded="true" signature="5932:5933" ph="..." />
+                <marker date="1539109584060" expanded="true" signature="5932:6062" ph="..." />
+                <marker date="1539109584060" expanded="true" signature="6116:6117" ph="..." />
+                <marker date="1539109584060" expanded="true" signature="6300:6301" ph="..." />
+                <marker date="1539109584060" expanded="true" signature="6693:6694" ph="..." />
+                <marker date="1539109584060" expanded="true" signature="6693:6828" ph="..." />
+                <marker date="1539109584060" expanded="true" signature="6887:6888" ph="..." />
+                <marker date="1539109584060" expanded="true" signature="6887:7024" ph="..." />
+                <marker date="1539109584060" expanded="true" signature="7081:7082" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ninja/panel/validators/currency.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="20">
+              <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+              <folding>
+                <marker date="1539109326050" expanded="true" signature="27:32" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ninja/panel/validators/deliverymethod.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="12" column="25" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ninja/panel/validators/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="67" selection-start-column="67" selection-end-column="67" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ninja/panel/validators/deliveryaddress.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="19" column="24" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ninja/panel/validators/contractor.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="19" column="24" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ninja/panel/validators/order.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="19" column="24" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ninja/panel/validators/product.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ninja/panel/validators/user.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -285,6 +254,15 @@
         <option value="$PROJECT_DIR$/docs/index.md" />
         <option value="$PROJECT_DIR$/ninja/panel/urls.py" />
         <option value="$PROJECT_DIR$/ninja/panel/templates/login.html" />
+        <option value="$PROJECT_DIR$/ninja/panel/validators/category.py" />
+        <option value="$PROJECT_DIR$/ninja/panel/validators/product.py" />
+        <option value="$PROJECT_DIR$/ninja/panel/validators/user.py" />
+        <option value="$PROJECT_DIR$/ninja/panel/validators/deliveryaddress.py" />
+        <option value="$PROJECT_DIR$/ninja/panel/validators/contractor.py" />
+        <option value="$PROJECT_DIR$/ninja/panel/validators/__init__.py" />
+        <option value="$PROJECT_DIR$/ninja/panel/validators/deliverymethod.py" />
+        <option value="$PROJECT_DIR$/ninja/panel/validators/order.py" />
+        <option value="$PROJECT_DIR$/ninja/panel/validators/currency.py" />
         <option value="$PROJECT_DIR$/ninja/panel/views.py" />
       </list>
     </option>
@@ -321,6 +299,19 @@
               <item name="7ninjas-test-task-1" type="b2602c69:ProjectViewProjectNode" />
               <item name="7ninjas-test-task-1" type="462c0819:PsiDirectoryNode" />
               <item name="ninja" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="7ninjas-test-task-1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="7ninjas-test-task-1" type="462c0819:PsiDirectoryNode" />
+              <item name="ninja" type="462c0819:PsiDirectoryNode" />
+              <item name="panel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="7ninjas-test-task-1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="7ninjas-test-task-1" type="462c0819:PsiDirectoryNode" />
+              <item name="ninja" type="462c0819:PsiDirectoryNode" />
+              <item name="panel" type="462c0819:PsiDirectoryNode" />
+              <item name="validators" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -519,6 +510,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ninja/panel/validators/category.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="8" selection-end-line="4" selection-end-column="8" />
+          <folding>
+            <marker date="1539108936159" expanded="true" signature="36:41" ph="..." />
+            <marker date="1539108936159" expanded="true" signature="69:74" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ninja/panel/validators/product.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ninja/panel/validators/user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ninja/panel/validators/deliveryaddress.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="19" column="24" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ninja/panel/validators/contractor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="19" column="24" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ninja/panel/validators/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="67" selection-start-column="67" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ninja/panel/validators/deliverymethod.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ninja/panel/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
@@ -529,21 +573,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ninja/panel/validators/order.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="19" column="24" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ninja/panel/validators/currency.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+          <folding>
+            <marker date="1539109326050" expanded="true" signature="27:32" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ninja/panel/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="330">
+          <caret line="51" column="22" lean-forward="true" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
           <folding>
-            <element signature="e#0#71#0" expanded="true" />
-            <marker date="1539108419072" expanded="true" signature="625:718" ph="..." />
-            <marker date="1539108419072" expanded="true" signature="4430:4512" ph="..." />
-            <marker date="1539108419072" expanded="true" signature="4651:4656" ph="..." />
-            <marker date="1539108419072" expanded="true" signature="4714:4719" ph="..." />
-            <marker date="1539108419072" expanded="true" signature="4779:4784" ph="..." />
-            <marker date="1539108419072" expanded="true" signature="4842:4847" ph="..." />
-            <marker date="1539108419072" expanded="true" signature="4993:4998" ph="..." />
-            <marker date="1539108419072" expanded="true" signature="5063:5068" ph="..." />
-            <marker date="1539108419072" expanded="true" signature="5131:5136" ph="..." />
+            <element signature="e#406#477#0" expanded="true" />
+            <marker date="1539109584060" expanded="true" signature="1037:1429" ph="..." />
+            <marker date="1539109584060" expanded="true" signature="5487:5569" ph="..." />
+            <marker date="1539109584060" expanded="true" signature="5932:5933" ph="..." />
+            <marker date="1539109584060" expanded="true" signature="5932:6062" ph="..." />
+            <marker date="1539109584060" expanded="true" signature="6116:6117" ph="..." />
+            <marker date="1539109584060" expanded="true" signature="6300:6301" ph="..." />
+            <marker date="1539109584060" expanded="true" signature="6693:6694" ph="..." />
+            <marker date="1539109584060" expanded="true" signature="6693:6828" ph="..." />
+            <marker date="1539109584060" expanded="true" signature="6887:6888" ph="..." />
+            <marker date="1539109584060" expanded="true" signature="6887:7024" ph="..." />
+            <marker date="1539109584060" expanded="true" signature="7081:7082" ph="..." />
           </folding>
         </state>
       </provider>

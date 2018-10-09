@@ -9,6 +9,9 @@ built-in django functions do not allow to manipulate views in manner, especially
 does not allow advanced validation out of the box.
 
 Also, each view is secured to be viewed only by staff members.
+
+This file is considered that shall be small and concise and provide basic logic
+about views so each controller logic has been put into submodule validators.
 """
 
 from django.contrib.admin.views.decorators import staff_member_required
@@ -16,12 +19,26 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 
 # Create your views here.
+from ninja.panel.validators import user, deliveryaddress, contractor, deliverymethod, order
+
 
 def panel_login(request):
+    """
+
+    :param request: HttpRequest
+    :return: login screen if user is not authenticated, else main screen of admin panel (type of: HttpResponse)
+    """
     if request.method == "GET":
-        pass
+        context = {}
+        if request.user.is_authenticated():
+            context['UserEmail'] = request.user.email
+            context['UserName'] = request.user.username
+            return render(request, 'panel_welcome.html')
+        else:
+            return render(request, 'login_screen.html', context)
     if request.method == "POST":
         pass
+
 
 @staff_member_required
 def category_add(request):
@@ -34,6 +51,7 @@ def category_add(request):
         pass
     if request.method == "POST":
         pass
+
 
 @staff_member_required
 def category_edit(request, category):
@@ -48,6 +66,7 @@ def category_edit(request, category):
     if request.method == "POST":
         pass
 
+
 @staff_member_required
 def category_remove(request):
     """
@@ -59,6 +78,7 @@ def category_remove(request):
         pass
     if request.method == "POST":
         pass
+
 
 @staff_member_required
 def product_add(request):
@@ -72,6 +92,7 @@ def product_add(request):
     if request.method == "POST":
         pass
 
+
 @staff_member_required
 def product_edit(request):
     """
@@ -83,6 +104,7 @@ def product_edit(request):
         pass
     if request.method == "POST":
         pass
+
 
 @staff_member_required
 def product_remove(request):
@@ -96,6 +118,7 @@ def product_remove(request):
     if request.method == "POST":
         pass
 
+
 @staff_member_required
 def currency_add(request):
     """
@@ -104,6 +127,7 @@ def currency_add(request):
     :return:
     """
     pass
+
 
 @staff_member_required
 def currency_edit(request):
@@ -117,6 +141,7 @@ def currency_edit(request):
     if request.method == "POST":
         pass
 
+
 @staff_member_required
 def currency_remove(request):
     """
@@ -129,6 +154,7 @@ def currency_remove(request):
     if request.method == "POST":
         pass
 
+
 @staff_member_required
 def orders_list(request):
     """
@@ -136,7 +162,11 @@ def orders_list(request):
     :param request:
     :return:
     """
-    pass
+    if request.method == "GET":
+        pass
+    if request.method == "POST":
+        pass
+
 
 @staff_member_required
 def orders_add(request):
@@ -148,7 +178,8 @@ def orders_add(request):
     if request.method == "GET":
         pass
     if request.method == "POST":
-        pass
+        return order.validate_add(request)
+
 
 @staff_member_required
 def orders_edit(request):
@@ -160,7 +191,8 @@ def orders_edit(request):
     if request.method == "GET":
         pass
     if request.method == "POST":
-        pass
+        return order.validate_edit(request)
+
 
 @staff_member_required
 def orders_remove(request):
@@ -172,7 +204,8 @@ def orders_remove(request):
     if request.method == "GET":
         pass
     if request.method == "POST":
-        pass
+        return order.validate_remove(request)
+
 
 @staff_member_required
 def orders_fullfill(request):
@@ -184,7 +217,8 @@ def orders_fullfill(request):
     if request.method == "GET":
         pass
     if request.method == "POST":
-        pass
+        return order.validate_fullfil(request)
+
 
 @staff_member_required
 def deliverymethod_list(request):
@@ -196,7 +230,8 @@ def deliverymethod_list(request):
     if request.method == "GET":
         pass
     if request.method == "POST":
-        pass
+        return deliverymethod.validate_list(request)
+
 
 @staff_member_required
 def deliverymethod_add(request):
@@ -208,7 +243,8 @@ def deliverymethod_add(request):
     if request.method == "GET":
         pass
     if request.method == "POST":
-        pass
+        return deliverymethod.validate_add(request)
+
 
 @staff_member_required
 def deliverymethod_edit(request):
@@ -220,7 +256,8 @@ def deliverymethod_edit(request):
     if request.method == "GET":
         pass
     if request.method == "POST":
-        pass
+        return deliverymethod.validate_edit(request)
+
 
 @staff_member_required
 def deliverymethod_remove(request):
@@ -232,37 +269,69 @@ def deliverymethod_remove(request):
     if request.method == "GET":
         pass
     if request.method == "POST":
-        pass
+        return deliverymethod.validate_remove(request)
+
 
 @staff_member_required
 def contractor_add(request):
-    pass
+    if request.method == "GET":
+        pass
+    if request.method == "POST":
+        return contractor.validate_add(request)
+
 
 @staff_member_required
 def contractor_edit(request):
-    pass
+    if request.method == "GET":
+        pass
+    if request.method == "POST":
+        return contractor.validate_edit(request)
+
 
 @staff_member_required
 def contractor_remove(request):
-    pass
+    if request.method == "GET":
+        pass
+    if request.method == "POST":
+        return contractor.validate_remove(request)
+
 
 @staff_member_required
 def contractor_list(request):
-    pass
+    if request.method == "GET":
+        pass
+    if request.method == "POST":
+        return contractor.validate_list(request)
+
 
 @login_required
 @staff_member_required
 def deliveryaddress_add(request):
-    pass
+    if request.method == "GET":
+        pass
+    if request.method == "POST":
+        return deliveryaddress.validate_add(request)
+
 
 @staff_member_required
 def deliveryaddress_edit(request):
-    pass
+    if request.method == "GET":
+        pass
+    if request.method == "POST":
+        return deliveryaddress.validate_edit(request)
+
 
 @staff_member_required
 def deliveryaddress_remove(request):
-    pass
+    if request.method == "GET":
+        pass
+    if request.method == "POST":
+        return deliveryaddress.validate_remove(request)
+
 
 @staff_member_required
 def deliveryaddress_list(request):
-    pass
+    if request.method == "GET":
+        pass
+    if request.method == "POST":
+        return deliveryaddress.validate_list(request)
