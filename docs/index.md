@@ -8,10 +8,38 @@ For more detailed information regarding task specification go to [Specification.
 
 ## Toolchain
 Applications and services used to solve this task:
-* macOS High Sierra 10.12
-* PyCharm Community (current)
+* macOS High Sierra 10.12 / Manjaro Linux (rolling)
+* PyCharm Community (2018.2.4)
 * JetBrains Toolbox
-* Django 2.1.2
+* Django 1.11.16
 * Django Rest Framework 3.8.2
 
-## 
+## Frameworks
+
+Application requires following frameworks:
+
+* Django 1.11.16
+* Django Rest Framework 3.8.2
+* pytz (current)
+
+They may be installed using
+```bash
+(venv)$ pip install -r requirements.txt
+```
+
+It is advised to use Virtual Environment when running this App.
+
+## Deployment
+
+### Local machine
+```commandline
+cd ninja
+python -m manage migrate
+python -m manage runserver
+```
+
+### Heroku platform
+TODO
+
+### Google App Engine
+TODO

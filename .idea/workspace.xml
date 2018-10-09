@@ -2,8 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa9496a3-33e5-4042-b145-c77662aaf7ad" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/simple_shop/shop/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/simple_shop/shop/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_shop/simple_shop/populate_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/simple_shop/simple_shop/populate_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ninja/panel/templates/panel_base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ninja/panel/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/7ninjas-test-task-1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/7ninjas-test-task-1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jupiter.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ninja/panel/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ninja/panel/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple_shop/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple_shop/api/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple_shop/api/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple_shop/api/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple_shop/api/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple_shop/api/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple_shop/api/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple_shop/api/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple_shop/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple_shop/shop/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple_shop/shop/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple_shop/shop/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple_shop/shop/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple_shop/shop/migrations/0002_auto_20181008_1308.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple_shop/shop/migrations/0003_auto_20181008_1312.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple_shop/shop/migrations/0004_auto_20181008_1417.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple_shop/shop/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple_shop/shop/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple_shop/shop/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple_shop/shop/views/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple_shop/shop/views/paint.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple_shop/shop/views/registration.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple_shop/simple_shop/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple_shop/simple_shop/populate_data.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple_shop/simple_shop/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple_shop/simple_shop/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple_shop/simple_shop/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple_shop/staffzone/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple_shop/staffzone/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple_shop/staffzone/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple_shop/staffzone/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple_shop/staffzone/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple_shop/staffzone/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple_shop/staffzone/views.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,27 +102,37 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="1" />
+          <entry key="html" value="1" />
+          <entry key="md" value="1" />
+          <entry key="py" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="1" />
+          <entry key="HTML" value="1" />
+          <entry key="Markdown" value="1" />
+          <entry key="Python" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="2837" />
+          <entry key="html" value="58" />
+          <entry key="md" value="556" />
+          <entry key="py" value="5676" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="2837" />
+          <entry key="CommandLine" value="2" />
+          <entry key="HTML" value="58" />
+          <entry key="Markdown" value="554" />
+          <entry key="Python" value="5676" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -100,35 +151,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/simple_shop/shop/models.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="146" column="76" selection-start-line="146" selection-start-column="76" selection-end-line="146" selection-end-column="76" />
-              <folding>
-                <marker date="1539019865213" expanded="true" signature="4734:4890" ph="..." />
-              </folding>
+            <state>
+              <caret line="107" selection-start-line="107" selection-end-line="107" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1104" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/simple_shop/simple_shop/populate_data.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="63" column="40" selection-start-line="63" selection-start-column="40" selection-end-line="63" selection-end-column="40" />
-              <folding>
-                <element signature="e#195#351#0" expanded="true" />
-                <marker date="1539019865203" expanded="true" signature="2532:2679" ph="..." />
-                <marker date="1539019865203" expanded="true" signature="2699:4039" ph="..." />
-              </folding>
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="120">
+                <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -146,27 +185,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/simple_shop/simple_shop/wsgi.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="13" column="49" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/simple_shop/manage.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
-              <folding>
-                <element signature="e#22#31#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/API/KB/KB1000.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -179,24 +197,55 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/simple_shop/shop/views/registration.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#36#0" expanded="true" />
-              </folding>
+        <entry file="file://$PROJECT_DIR$/docs/index.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="122">
+                <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/index.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor>
-                <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
-              </first_editor>
-              <second_editor />
+        <entry file="file://$PROJECT_DIR$/ninja/panel/templates/panel_base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ninja/panel/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ninja/panel/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
+              <folding>
+                <element signature="e#0#71#0" expanded="true" />
+                <marker date="1539108419072" expanded="true" signature="625:718" ph="..." />
+                <marker date="1539108419072" expanded="true" signature="4430:4512" ph="..." />
+                <marker date="1539108419072" expanded="true" signature="4651:4656" ph="..." />
+                <marker date="1539108419072" expanded="true" signature="4714:4719" ph="..." />
+                <marker date="1539108419072" expanded="true" signature="4779:4784" ph="..." />
+                <marker date="1539108419072" expanded="true" signature="4842:4847" ph="..." />
+                <marker date="1539108419072" expanded="true" signature="4993:4998" ph="..." />
+                <marker date="1539108419072" expanded="true" signature="5063:5068" ph="..." />
+                <marker date="1539108419072" expanded="true" signature="5131:5136" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -206,6 +255,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Python Script" />
       </list>
     </option>
@@ -225,7 +275,6 @@
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/docs/API/API.md" />
-        <option value="$PROJECT_DIR$/docs/index.md" />
         <option value="$PROJECT_DIR$/docs/API/KB/KB1000.md" />
         <option value="$PROJECT_DIR$/docs/API/PYTHON/PYTHON_START.md" />
         <option value="$PROJECT_DIR$/simple_shop/simple_shop/settings.py" />
@@ -233,6 +282,10 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/simple_shop/simple_shop/populate_data.py" />
         <option value="$PROJECT_DIR$/simple_shop/shop/models.py" />
+        <option value="$PROJECT_DIR$/docs/index.md" />
+        <option value="$PROJECT_DIR$/ninja/panel/urls.py" />
+        <option value="$PROJECT_DIR$/ninja/panel/templates/login.html" />
+        <option value="$PROJECT_DIR$/ninja/panel/views.py" />
       </list>
     </option>
   </component>
@@ -267,19 +320,7 @@
             <path>
               <item name="7ninjas-test-task-1" type="b2602c69:ProjectViewProjectNode" />
               <item name="7ninjas-test-task-1" type="462c0819:PsiDirectoryNode" />
-              <item name="simple_shop" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="7ninjas-test-task-1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="7ninjas-test-task-1" type="462c0819:PsiDirectoryNode" />
-              <item name="simple_shop" type="462c0819:PsiDirectoryNode" />
-              <item name="shop" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="7ninjas-test-task-1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="7ninjas-test-task-1" type="462c0819:PsiDirectoryNode" />
-              <item name="simple_shop" type="462c0819:PsiDirectoryNode" />
-              <item name="simple_shop" type="462c0819:PsiDirectoryNode" />
+              <item name="ninja" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -289,11 +330,12 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.templateLanguages.PyTemplateLanguageModulesConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -331,10 +373,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="0" width="1922" height="1053" extended-state="6" />
+    <frame x="-1" y="0" width="1368" height="741" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18210863" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18429004" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -347,8 +389,8 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50159746" side_tool="true" visible="true" weight="0.32869378" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49840257" visible="true" weight="0.32869378" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.3957704" side_tool="true" visible="true" weight="0.3279743" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.6042296" visible="true" weight="0.3279743" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -364,22 +406,10 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/simple_shop/shop/apps.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/simple_shop/shop/tests.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/simple_shop/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/simple_shop/shop/apps.py" />
+    <entry file="file://$PROJECT_DIR$/simple_shop/shop/tests.py" />
+    <entry file="file://$PROJECT_DIR$/simple_shop/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/main.py" />
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -387,29 +417,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/simple_shop/simple_shop/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Jupiter.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/simple_shop/shop/views/paint.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="90">
-            <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/simple_shop/simple_shop/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/Jupiter.ipynb" />
+    <entry file="file://$PROJECT_DIR$/simple_shop/shop/views/paint.py" />
     <entry file="file://$PROJECT_DIR$/docs/API/PYTHON/modules/simple_shop.md">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -441,13 +451,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/simple_shop/simple_shop/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="39" column="9" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/simple_shop/simple_shop/settings.py" />
+    <entry file="file://$PROJECT_DIR$/simple_shop/simple_shop/wsgi.py" />
+    <entry file="file://$PROJECT_DIR$/simple_shop/manage.py" />
+    <entry file="file://$PROJECT_DIR$/simple_shop/shop/views/registration.py" />
+    <entry file="file://$PROJECT_DIR$/simple_shop/simple_shop/populate_data.py" />
+    <entry file="file://$PROJECT_DIR$/simple_shop/shop/models.py" />
     <entry file="file://$PROJECT_DIR$/docs/API/PYTHON/modules/staff_zone.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -466,23 +475,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/simple_shop/simple_shop/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="13" column="49" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/simple_shop/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="e#22#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/API/KB/KB1000.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -493,48 +485,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/simple_shop/shop/views/registration.py">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
+          <caret line="107" selection-start-line="107" selection-end-line="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="120">
+            <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/index.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor>
-            <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+          <first_editor relative-caret-position="122">
+            <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/ninja/panel/templates/panel_base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1104" />
+        <state relative-caret-position="140">
+          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/simple_shop/simple_shop/populate_data.py">
+    <entry file="file://$PROJECT_DIR$/ninja/panel/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="63" column="40" selection-start-line="63" selection-start-column="40" selection-end-line="63" selection-end-column="40" />
+        <state relative-caret-position="80">
+          <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
           <folding>
-            <element signature="e#195#351#0" expanded="true" />
-            <marker date="1539019865203" expanded="true" signature="2532:2679" ph="..." />
-            <marker date="1539019865203" expanded="true" signature="2699:4039" ph="..." />
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/simple_shop/shop/models.py">
+    <entry file="file://$PROJECT_DIR$/ninja/panel/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="146" column="76" selection-start-line="146" selection-start-column="76" selection-end-line="146" selection-end-column="76" />
+        <state relative-caret-position="270">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
           <folding>
-            <marker date="1539019865213" expanded="true" signature="4734:4890" ph="..." />
+            <element signature="e#0#71#0" expanded="true" />
+            <marker date="1539108419072" expanded="true" signature="625:718" ph="..." />
+            <marker date="1539108419072" expanded="true" signature="4430:4512" ph="..." />
+            <marker date="1539108419072" expanded="true" signature="4651:4656" ph="..." />
+            <marker date="1539108419072" expanded="true" signature="4714:4719" ph="..." />
+            <marker date="1539108419072" expanded="true" signature="4779:4784" ph="..." />
+            <marker date="1539108419072" expanded="true" signature="4842:4847" ph="..." />
+            <marker date="1539108419072" expanded="true" signature="4993:4998" ph="..." />
+            <marker date="1539108419072" expanded="true" signature="5063:5068" ph="..." />
+            <marker date="1539108419072" expanded="true" signature="5131:5136" ph="..." />
           </folding>
         </state>
       </provider>
