@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa9496a3-33e5-4042-b145-c77662aaf7ad" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ninja/panel/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ninja/panel/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -82,7 +83,7 @@
         <counts>
           <entry key="html" value="58" />
           <entry key="md" value="556" />
-          <entry key="py" value="7283" />
+          <entry key="py" value="8080" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -90,7 +91,7 @@
           <entry key="CommandLine" value="2" />
           <entry key="HTML" value="58" />
           <entry key="Markdown" value="554" />
-          <entry key="Python" value="7283" />
+          <entry key="Python" value="8080" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -114,21 +115,21 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ninja/panel/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="376" lean-forward="true" selection-start-line="376" selection-end-line="376" />
+            <state relative-caret-position="-420">
+              <caret line="60" selection-start-line="60" selection-end-line="60" />
               <folding>
                 <element signature="e#406#477#0" expanded="true" />
-                <marker date="1539109693993" expanded="true" signature="1037:1429" ph="..." />
-                <marker date="1539109693993" expanded="true" signature="5487:5569" ph="..." />
-                <marker date="1539109693993" expanded="true" signature="6032:6033" ph="..." />
-                <marker date="1539109693993" expanded="true" signature="6032:6162" ph="..." />
-                <marker date="1539109693993" expanded="true" signature="6266:6267" ph="..." />
-                <marker date="1539109693993" expanded="true" signature="6500:6501" ph="..." />
-                <marker date="1539109693993" expanded="true" signature="6977:6978" ph="..." />
-                <marker date="1539109693993" expanded="true" signature="6977:7112" ph="..." />
-                <marker date="1539109693993" expanded="true" signature="7221:7222" ph="..." />
-                <marker date="1539109693993" expanded="true" signature="7221:7358" ph="..." />
-                <marker date="1539109693993" expanded="true" signature="7465:7466" ph="..." />
+                <marker date="1539112111890" expanded="true" signature="1037:1429" ph="..." />
+                <marker date="1539112111890" expanded="true" signature="5990:6103" ph="..." />
+                <marker date="1539112111890" expanded="true" signature="6628:6629" ph="..." />
+                <marker date="1539112111890" expanded="true" signature="6628:6758" ph="..." />
+                <marker date="1539112111890" expanded="true" signature="6893:6894" ph="..." />
+                <marker date="1539112111890" expanded="true" signature="7158:7159" ph="..." />
+                <marker date="1539112111890" expanded="true" signature="7697:7698" ph="..." />
+                <marker date="1539112111890" expanded="true" signature="7697:7832" ph="..." />
+                <marker date="1539112111890" expanded="true" signature="7972:7973" ph="..." />
+                <marker date="1539112111890" expanded="true" signature="7972:8109" ph="..." />
+                <marker date="1539112111890" expanded="true" signature="8247:8248" ph="..." />
               </folding>
             </state>
           </provider>
@@ -582,21 +583,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ninja/panel/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="376" lean-forward="true" selection-start-line="376" selection-end-line="376" />
+        <state relative-caret-position="-420">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
           <folding>
             <element signature="e#406#477#0" expanded="true" />
-            <marker date="1539109693993" expanded="true" signature="1037:1429" ph="..." />
-            <marker date="1539109693993" expanded="true" signature="5487:5569" ph="..." />
-            <marker date="1539109693993" expanded="true" signature="6032:6033" ph="..." />
-            <marker date="1539109693993" expanded="true" signature="6032:6162" ph="..." />
-            <marker date="1539109693993" expanded="true" signature="6266:6267" ph="..." />
-            <marker date="1539109693993" expanded="true" signature="6500:6501" ph="..." />
-            <marker date="1539109693993" expanded="true" signature="6977:6978" ph="..." />
-            <marker date="1539109693993" expanded="true" signature="6977:7112" ph="..." />
-            <marker date="1539109693993" expanded="true" signature="7221:7222" ph="..." />
-            <marker date="1539109693993" expanded="true" signature="7221:7358" ph="..." />
-            <marker date="1539109693993" expanded="true" signature="7465:7466" ph="..." />
+            <marker date="1539112111890" expanded="true" signature="1037:1429" ph="..." />
+            <marker date="1539112111890" expanded="true" signature="5990:6103" ph="..." />
+            <marker date="1539112111890" expanded="true" signature="6628:6629" ph="..." />
+            <marker date="1539112111890" expanded="true" signature="6628:6758" ph="..." />
+            <marker date="1539112111890" expanded="true" signature="6893:6894" ph="..." />
+            <marker date="1539112111890" expanded="true" signature="7158:7159" ph="..." />
+            <marker date="1539112111890" expanded="true" signature="7697:7698" ph="..." />
+            <marker date="1539112111890" expanded="true" signature="7697:7832" ph="..." />
+            <marker date="1539112111890" expanded="true" signature="7972:7973" ph="..." />
+            <marker date="1539112111890" expanded="true" signature="7972:8109" ph="..." />
+            <marker date="1539112111890" expanded="true" signature="8247:8248" ph="..." />
           </folding>
         </state>
       </provider>
