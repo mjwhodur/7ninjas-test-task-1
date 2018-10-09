@@ -1,6 +1,6 @@
 """
     Module:
-        simple_shop.simple_shop.populate
+        7ninjas.7ninjas.populate
 
     Purpose:
         Populating database with example data.
