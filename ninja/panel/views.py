@@ -274,6 +274,11 @@ def deliverymethod_remove(request):
 
 @staff_member_required
 def contractor_add(request):
+    """
+
+    :param request:
+    :return:
+    """
     if request.method == "GET":
         pass
     if request.method == "POST":
@@ -282,6 +287,11 @@ def contractor_add(request):
 
 @staff_member_required
 def contractor_edit(request):
+    """
+
+    :param request:
+    :return:
+    """
     if request.method == "GET":
         pass
     if request.method == "POST":
@@ -290,6 +300,11 @@ def contractor_edit(request):
 
 @staff_member_required
 def contractor_remove(request):
+    """
+
+    :param request:
+    :return:
+    """
     if request.method == "GET":
         pass
     if request.method == "POST":
@@ -298,15 +313,24 @@ def contractor_remove(request):
 
 @staff_member_required
 def contractor_list(request):
+    """
+
+    :param request:
+    :return:
+    """
     if request.method == "GET":
         pass
     if request.method == "POST":
         return contractor.validate_list(request)
 
 
-@login_required
 @staff_member_required
 def deliveryaddress_add(request):
+    """
+
+    :param request:
+    :return:
+    """
     if request.method == "GET":
         pass
     if request.method == "POST":
@@ -315,6 +339,11 @@ def deliveryaddress_add(request):
 
 @staff_member_required
 def deliveryaddress_edit(request):
+    """
+
+    :param request:
+    :return:
+    """
     if request.method == "GET":
         pass
     if request.method == "POST":
@@ -323,6 +352,11 @@ def deliveryaddress_edit(request):
 
 @staff_member_required
 def deliveryaddress_remove(request):
+    """
+
+    :param request:
+    :return:
+    """
     if request.method == "GET":
         pass
     if request.method == "POST":
@@ -331,6 +365,11 @@ def deliveryaddress_remove(request):
 
 @staff_member_required
 def deliveryaddress_list(request):
+    """
+
+    :param request:
+    :return:
+    """
     if request.method == "GET":
         pass
     if request.method == "POST":
