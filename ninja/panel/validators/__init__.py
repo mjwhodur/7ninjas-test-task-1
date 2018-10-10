@@ -1,1 +1,1 @@
-from . import category, contractor, deliveryaddress, deliverymethod, order, product, user
+from . import category, contractor, deliveryaddress, deliverymethod, order, prices, product, user

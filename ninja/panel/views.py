@@ -19,7 +19,7 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 
 # Create your views here.
-from ninja.panel.validators import user, deliveryaddress, contractor, deliverymethod, order
+from ninja.panel.validators import user, deliveryaddress, contractor, deliverymethod, order, prices
 
 
 def panel_login(request):
@@ -374,3 +374,16 @@ def deliveryaddress_list(request):
         pass
     if request.method == "POST":
         return deliveryaddress.validate_list(request)
+
+@staff_member_required
+def set_prices_for_product(request, product_index):
+    """
+
+    :param request:
+    :param product_index:
+    :return:
+    """
+    if request.method == "GET":
+        pass
+    if request.method == "POST":
+        return prices.validate(request, product_index)

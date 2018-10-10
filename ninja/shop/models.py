@@ -1,10 +1,10 @@
 from django.db import models
 
 
-# Create your models here.
-
 class Currencies(models.Model):
     """
+        Currency model
+
         Model for holding information about currency and their exchange rates
     """
     Name = models.CharField()
@@ -20,6 +20,10 @@ class Product(models.Model):
         currency
 
         Likes are stored in WishList model
+
+        Image is held in S3 Storage / Google Cloud Storage (however, depending on configuration it is available
+        to upload files to /media catalog.
+
     """
     Title = models.CharField()
     Image = models.CharField()
