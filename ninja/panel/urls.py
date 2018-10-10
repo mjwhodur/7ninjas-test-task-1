@@ -19,7 +19,7 @@ urlpatterns = [
     #
     #   Cennik
     #       Ustaw cenę dla produktu
-    #           Automatycznie, ręcznie
+    #           Automatycznie, ręcznie (podłączy się automatycznie do widoku)
     #
     #   Pseudo-admin
     #       Wypełnij

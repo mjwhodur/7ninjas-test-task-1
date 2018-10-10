@@ -6,10 +6,30 @@ class Currencies(models.Model):
         Currency model
 
         Model for holding information about currency and their exchange rates
+
+        Thanks to Exchange rate application will automatically convert prices to their values i.e.:
+
+            def SetPrice(Product, Currency, value, [list of prices set on form]):
+                Get Currency Exchange rate
+                basePrice = value / Currency.ExchangeRate
+                for currency in Currency.objects.all()
+                    #   ... some important stuff here
+                    #   For each currency the price is set automatically
+                    #   except for prices implicitly set.
+                    #
+                    #
+
+        If user has a shop in Poland, but does not sell in Poland, and sets the price in EURO, not in PLN and sets
+        its exchange rate, the price will be calculated to PLN (base currency with exchange rate == 1) and then
+        converted into each currency supported by the shop, if not set implicitly.
+
+        LesserPlaces : models.IntegerField contains information about how many
+        digits are after dot in the currency. I.e. in PLN or EURO 2, in HUF 2, CHK 1, SEK 0
     """
     Name = models.CharField()
     Mnemonic = models.CharField()
     ExchangeRate = models.FloatField()
+    LesserPlaces = models.IntegerField()
 
 
 class Product(models.Model):
@@ -101,10 +121,15 @@ class ProductPriceList(models.Model):
 
         Holds prices regarding different currencies.
         These values may be automatically calculated
+
+        SetImplicitly field states if price was set directly by the user, so the shop won't affect changes.
+        However, if the user deletes the value, the SetImplicitly flag would be set to False, stating
+        the shop has to automatically handle the conversion process.
     """
     Product = models.ForeignKey(Product)
     Currency = models.ForeignKey(Currencies)
     Price = models.FloatField()
+    SetImplicitly = models.BooleanField()
 
 
 class DeliveryPriceList(models.Model):
@@ -113,7 +138,13 @@ class DeliveryPriceList(models.Model):
 
         Holds prices regarding delivery methods and currencies.
         These values may be automatically calculated
+
+        SetImplicitly field states if price was set directly by the user, so the shop won't affect changes.
+        However, if the user deletes the value, the SetImplicitly flag would be set to False, stating
+        the shop has to automatically handle the conversion process.
+
     """
     DeliveryMethod = models.ForeignKey(DeliveryType)
     Currency = models.ForeignKey(Currencies)
     Price = models.FloatField()
+
