@@ -33,7 +33,7 @@ It is advised to use Virtual Environment when running this App.
 Modern Linux distributions come with Python 3.7 preinstalled, however
 Django 1.11+ is not currently compatible with current version.
 
-[Solution](docs/InstallingConda.md)
+[Solution](InstallingConda.md)
 
 ## Deployment
 
