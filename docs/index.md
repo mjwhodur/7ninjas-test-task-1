@@ -29,6 +29,12 @@ They may be installed using
 
 It is advised to use Virtual Environment when running this App.
 
+## Running in modern distributions
+Modern Linux distributions come with Python 3.7 preinstalled, however
+Django 1.11+ is not currently compatible with current version.
+
+[Solution](docs/InstallingConda.md)
+
 ## Deployment
 
 ### Local machine
@@ -37,9 +43,3 @@ cd ninja
 python -m manage migrate
 python -m manage runserver
 ```
-
-### Heroku platform
-TODO
-
-### Google App Engine
-TODO
