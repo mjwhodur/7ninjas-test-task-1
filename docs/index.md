@@ -43,3 +43,7 @@ cd ninja
 python -m manage migrate
 python -m manage runserver
 ```
+### Google Cloud Platform
+TODO
+### Heroku
+TODO

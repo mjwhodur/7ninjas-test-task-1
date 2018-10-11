@@ -81,7 +81,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="58" />
-          <entry key="md" value="2810" />
+          <entry key="md" value="2867" />
           <entry key="py" value="8080" />
         </counts>
       </usages-collector>
@@ -89,7 +89,7 @@
         <counts>
           <entry key="CommandLine" value="4" />
           <entry key="HTML" value="58" />
-          <entry key="Markdown" value="2806" />
+          <entry key="Markdown" value="2863" />
           <entry key="Python" value="8080" />
         </counts>
       </usages-collector>
@@ -103,8 +103,8 @@
         <entry file="file://$PROJECT_DIR$/docs/index.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="280">
-                <caret line="35" column="11" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
+              <first_editor relative-caret-position="270">
+                <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
               </first_editor>
               <second_editor />
             </state>
@@ -291,7 +291,7 @@
     <frame x="55" y="30" width="1311" height="738" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18715306" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18715306" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -305,7 +305,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.39730373" side_tool="true" visible="true" weight="0.3305369" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.6026963" visible="true" weight="0.3305369" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.6026963" visible="true" weight="0.3305369" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -522,8 +522,8 @@
     <entry file="file://$PROJECT_DIR$/docs/index.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="280">
-            <caret line="35" column="11" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
+          <first_editor relative-caret-position="270">
+            <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
           </first_editor>
           <second_editor />
         </state>
