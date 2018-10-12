@@ -1,0 +1,41 @@
+{% extends 'panel_base.html' %}
+
+{% block content %}
+    <p>
+        You don't have sufficient permissions. Please log in to use service.
+    </p>
+
+    {% if Error %}
+    <div class="alert alert-danger">
+    {{ Error }}
+    </div>
+    {% endif %}
+
+    <div class="card bg-info text-white">
+        <div class="card-header">
+            Login form
+        </div>
+        <div class="card-body">
+            <form method="post" action="#">
+                {% csrf_token %}
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon-1">@</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                           aria-describedby="basic-addon-1" name="username"/>
+
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon-1">#</span>
+                    </div>
+                    <input type="password" class="form-control" placeholder="Password" aria-label="Username"
+                           aria-describedby="basic-addon-1" name="password"/>
+                </div>
+                <button class="btn btn-success" type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

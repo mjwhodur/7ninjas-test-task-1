@@ -1,28 +1,16 @@
+"""
+    Module: panel.urls
+
+    Purpose:
+
+        This is a url dispatch module which performs verification of URLs passed to application and applies
+        proper views
+
+"""
 from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    #   UKŁAD
-    #
-    #   Kontrahenci
-    #       Miejsca dostawy
-    #           Dodawanie, edycja, usuwanie
-    #
-    #   Zamówienia
-    #       Podgląd
-    #
-    #   Produkt
-    #       Dodaj, edytuj, usuń, podgląd
-    #
-    #   Waluty
-    #       Dodaj, edytuj, usuń, podgląd
-    #
-    #   Cennik
-    #       Ustaw cenę dla produktu
-    #           Automatycznie, ręcznie (podłączy się automatycznie do widoku)
-    #
-    #   Pseudo-admin
-    #       Wypełnij
 
     url(r'^products/remove/(?P<index>[0-9]+)$', views.panel_login),
     url(r'^products/edit/(?P<index>[0-9]+)$', views.panel_login),

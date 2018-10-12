@@ -15,8 +15,9 @@ about views so each controller logic has been put into submodule validators.
 """
 
 from django.contrib.admin.views.decorators import staff_member_required
+from django.contrib.auth import login, authenticate
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 # Create your views here.
 from panel.validators import user, deliveryaddress, contractor, deliverymethod, order, prices
@@ -35,10 +36,17 @@ def panel_login(request):
             context['UserName'] = request.user.username
             return render(request, 'panel_welcome.html')
         else:
-            return render(request, 'login_screen.html', context)
+            return render(request, 'panel/login.html', context)
     if request.method == "POST":
-        pass
+        user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
+        if request.POST.get('username') == '' or request.POST.get('password') == '':
+            return render(request, 'panel/login.html', context={'Error' : 'Please provide username and password'})
 
+        if user is not None:
+            login(request, user)
+            return redirect('PanelMain')
+        else:
+            return render(request, 'panel/login.html', context={'Error' : 'Credentials were not correct. Please try again.'})
 
 @staff_member_required
 def category_add(request):
