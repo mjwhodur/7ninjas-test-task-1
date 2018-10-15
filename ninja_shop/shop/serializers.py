@@ -31,3 +31,15 @@ class CurrenciesSerializer(serializers.Serializer):
         instance.LesserPlaces = validated_data('LesserPlaces', instance.LesserPlaces)
         instance.save()
         return instance
+
+class ProductSerializer(serializers.Serializer):
+    id = serializers.IntegerField(label='ID', read_only=True)
+    Title = serializers.CharField(allow_blank=False, allow_null=False, max_length=500)
+    Image = serializers.CharField(allow_blank=False, allow_null=False, max_length=500)
+    Description = serializers.CharField(allow_blank=False, allow_null=False, max_length=500)
+
+    def create(self, validated_data):
+        return Product.objects.create(**validated_data)
+
+    def update(self, instance, validated_data):
+        pass
