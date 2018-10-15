@@ -26,8 +26,8 @@ class Currencies(models.Model):
         LesserPlaces : models.IntegerField contains information about how many
         digits are after dot in the currency. I.e. in PLN or EURO 2, in HUF 2, CHK 1, SEK 0
     """
-    Name = models.CharField()
-    Mnemonic = models.CharField()
+    Name = models.CharField(max_length=500)
+    Mnemonic = models.CharField(max_length=3)
     ExchangeRate = models.FloatField()
     LesserPlaces = models.IntegerField()
 
@@ -45,9 +45,9 @@ class Product(models.Model):
         to upload files to /media catalog.
 
     """
-    Title = models.CharField()
-    Image = models.CharField()
-    Description = models.CharField()
+    Title = models.CharField(max_length=500)
+    Image = models.CharField(max_length=500)
+    Description = models.CharField(max_length=500)
 
 
 class DeliveryType(models.Model):
@@ -60,7 +60,7 @@ class DeliveryType(models.Model):
 
         IsPercent is type of models.NullBooleanField() temporarily. Not all database systems may support that value.
     """
-    Title = models.CharField()
+    Title = models.CharField(max_length=500)
     IsPercent = models.NullBooleanField()
     PercentValue = models.FloatField()
 
@@ -71,7 +71,7 @@ class Category(models.Model):
 
         Nothing big to do a description here. :)
     """
-    Title = models.CharField()
+    Title = models.CharField(max_length=100)
 
 
 class Order(models.Model):
@@ -87,7 +87,7 @@ class Order(models.Model):
     Number = models.BigIntegerField()
     MethodOfDelivery = models.ForeignKey(DeliveryType)
     Currency = models.ForeignKey(Currencies)
-    Timestamp = models.DateTimeField()
+    Timestamp = models.DateTimeField(auto_created=True)
 
 
 class OrderPositions(models.Model):
