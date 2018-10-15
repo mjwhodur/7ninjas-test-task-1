@@ -2,54 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f6d1182-e1cf-445b-8798-2947f56e82e8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/7ninjas-test-task-1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/7ninjas-test-task-1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ninja/api/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ninja/api/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ninja/api/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ninja/api/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ninja/api/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ninja/api/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ninja/api/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ninja/api/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ninja/exchange/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ninja/manage.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ninja/ninja/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ninja/ninja/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ninja/ninja/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ninja/ninja/wsgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ninja/panel/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ninja/panel/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ninja/panel/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ninja/panel/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ninja/panel/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ninja/panel/templates/panel_base.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ninja/panel/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ninja/panel/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ninja/panel/validators/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ninja/panel/validators/category.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ninja/panel/validators/contractor.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ninja/panel/validators/currency.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ninja/panel/validators/deliveryaddress.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ninja/panel/validators/deliverymethod.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ninja/panel/validators/order.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ninja/panel/validators/prices.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ninja/panel/validators/product.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ninja/panel/validators/user.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ninja/panel/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ninja/shop/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ninja/shop/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ninja/shop/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ninja/shop/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ninja/shop/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ninja/shop/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ninja/shop/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ninja/shop/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ninja_shop/ninja/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ninja_shop/ninja/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/venv/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,6 +17,7 @@
     <session id="-891563531">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="gitignore" value="1" />
           <entry key="html" value="4" />
           <entry key="md" value="12" />
           <entry key="py" value="53" />
@@ -72,7 +28,7 @@
         <counts>
           <entry key="HTML" value="4" />
           <entry key="Markdown" value="11" />
-          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="PLAIN_TEXT" value="3" />
           <entry key="Python" value="53" />
         </counts>
       </usages-collector>
@@ -132,20 +88,38 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ninja_shop/ninja/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="469">
-              <caret line="129" column="6" selection-start-line="129" selection-start-column="6" selection-end-line="129" selection-end-column="6" />
+            <state relative-caret-position="339">
+              <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/index.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="436">
+                <caret line="45" selection-start-line="45" selection-end-line="45" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ninja_shop/shop/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-202">
+              <caret line="108" column="29" selection-start-line="108" selection-start-column="29" selection-end-line="108" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/docs/index.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="493">
-                <caret line="49" column="110" selection-start-line="49" selection-start-column="110" selection-end-line="49" selection-end-column="110" />
-              </first_editor>
-              <second_editor />
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -190,16 +164,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ninja_shop/exchange/models.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ninja_shop/panel/models.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -240,6 +204,7 @@
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/ninja_shop/ninja/settings.py" />
         <option value="$PROJECT_DIR$/docs/index.md" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -260,7 +225,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -328,10 +292,17 @@
               <item name="ninja_shop" type="462c0819:PsiDirectoryNode" />
               <item name="panel" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="7ninjas-test-task-1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="7ninjas-test-task-1" type="462c0819:PsiDirectoryNode" />
+              <item name="ninja_shop" type="462c0819:PsiDirectoryNode" />
+              <item name="shop" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -404,8 +375,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ninja/panel/validators/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/ninja/panel/validators/product.py" />
     <entry file="file://$PROJECT_DIR$/ninja/panel/validators/user.py" />
     <entry file="file://$PROJECT_DIR$/ninja/panel/validators/deliverymethod.py" />
     <entry file="file://$PROJECT_DIR$/ninja/panel/models.py" />
@@ -436,7 +405,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ninja_shop/shop/models.py">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-202">
+          <caret line="108" column="29" selection-start-line="108" selection-start-column="29" selection-end-line="108" selection-end-column="29" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -549,8 +522,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ninja_shop/ninja/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="129" column="6" selection-start-line="129" selection-start-column="6" selection-end-line="129" selection-end-column="6" />
+        <state relative-caret-position="339">
+          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -589,18 +562,8 @@
     <entry file="file://$PROJECT_DIR$/docs/index.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="493">
-            <caret line="49" column="110" selection-start-line="49" selection-start-column="110" selection-end-line="49" selection-end-column="110" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/index.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="280">
-            <caret line="35" column="34" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
+          <first_editor relative-caret-position="436">
+            <caret line="45" selection-start-line="45" selection-end-line="45" />
           </first_editor>
           <second_editor />
         </state>
@@ -613,6 +576,13 @@
             <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
         </state>
       </provider>
     </entry>
