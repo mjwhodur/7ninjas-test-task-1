@@ -52,8 +52,8 @@ def panel_login(request):
 def category_add(request):
     """
     Adding category view
-    :param request: HttpRequest
-    :return:
+    :param request: HttpRequest - Incoming request
+    :return: HttpResponse
     """
     if request.method == "GET":
         pass
@@ -65,7 +65,7 @@ def category_add(request):
 def category_edit(request, category):
     """
     Edit category view
-    :param request: HttpRequest
+    :param request: HttpRequest - Incoming request
     :param category: int
     :return: HttpResponse
     """
@@ -79,8 +79,8 @@ def category_edit(request, category):
 def category_remove(request):
     """
     Remove category view
-    :param request:
-    :return:
+    :param request: HttpRequest - Incoming request
+    :return: HttpResponse
     """
     if request.method == "GET":
         pass
@@ -92,8 +92,8 @@ def category_remove(request):
 def product_add(request):
     """
     Add product view
-    :param request:
-    :return:
+    :param request: HttpRequest - Incoming request
+    :return: HttpResponse
     """
     if request.method == "GET":
         pass
@@ -105,8 +105,8 @@ def product_add(request):
 def product_edit(request):
     """
     Edit product data view
-    :param request:
-    :return:
+    :param request: HttpRequest - incoming request
+    :return: HttpResponse
     """
     if request.method == "GET":
         pass
@@ -118,8 +118,8 @@ def product_edit(request):
 def product_remove(request):
     """
     Remove product view
-    :param request:
-    :return:
+    :param request: HttpRequest - incoming request
+    :return: HttpResponse
     """
     if request.method == "GET":
         pass
@@ -131,8 +131,8 @@ def product_remove(request):
 def currency_add(request):
     """
     Add currency view
-    :param request:
-    :return:
+    :param request: HttpRequest - incoming request
+    :return: HttpResponse
     """
     pass
 
@@ -141,8 +141,8 @@ def currency_add(request):
 def currency_edit(request):
     """
     Edit currency view
-    :param request:
-    :return:
+    :param request: HttpRequest - incoming request
+    :return: HttpResponse
     """
     if request.method == "GET":
         pass
@@ -154,8 +154,8 @@ def currency_edit(request):
 def currency_remove(request):
     """
     Remove currency view
-    :param request:
-    :return:
+    :param request: HttpRequest - incoming request
+    :return: HttpResponse
     """
     if request.method == "GET":
         pass
@@ -167,8 +167,8 @@ def currency_remove(request):
 def orders_list(request):
     """
     List orders view
-    :param request:
-    :return:
+    :param request: HttpRequest - incoming request
+    :return: HttpResponse
     """
     if request.method == "GET":
         pass
@@ -180,8 +180,8 @@ def orders_list(request):
 def orders_add(request):
     """
     Add orders view
-    :param request:
-    :return:
+    :param request: HttpRequest - incoming request
+    :return: HttpResponse
     """
     if request.method == "GET":
         pass
@@ -193,8 +193,8 @@ def orders_add(request):
 def orders_edit(request):
     """
     Edit order with id... view
-    :param request:
-    :return:
+    :param request: HttpRequest - incoming request
+    :return: HttpResponse
     """
     if request.method == "GET":
         pass
@@ -206,8 +206,8 @@ def orders_edit(request):
 def orders_remove(request):
     """
     Remove order with id...
-    :param request:
-    :return:
+    :param request: HttpRequest - incoming request
+    :return: HttpResponse
     """
     if request.method == "GET":
         pass
@@ -219,8 +219,8 @@ def orders_remove(request):
 def orders_fullfill(request):
     """
     Fullfill order with ID and set its state to 'fulfilled'
-    :param request:
-    :return:
+    :param request: HttpRequest - incoming request
+    :return: HttpResponse
     """
     if request.method == "GET":
         pass
@@ -232,8 +232,8 @@ def orders_fullfill(request):
 def deliverymethod_list(request):
     """
     Show delivery methods with their prices
-    :param request:
-    :return:
+    :param request: HttpRequest - incoming request
+    :return: HttpResponse
     """
     if request.method == "GET":
         pass
@@ -245,8 +245,8 @@ def deliverymethod_list(request):
 def deliverymethod_add(request):
     """
     Add delivery methods
-    :param request:
-    :return:
+    :param request: HttpRequest - incoming request
+    :return: HttpResponse
     """
     if request.method == "GET":
         pass
@@ -258,8 +258,8 @@ def deliverymethod_add(request):
 def deliverymethod_edit(request):
     """
     Edit delivery methods
-    :param request:
-    :return:
+    :param request: HttpRequest - incoming request
+    :return: HttpResponse
     """
     if request.method == "GET":
         pass
@@ -271,8 +271,8 @@ def deliverymethod_edit(request):
 def deliverymethod_remove(request):
     """
     Remove delivery methods
-    :param request:
-    :return:
+    :param request: HttpRequest - incoming request
+    :return: HttpResponse
     """
     if request.method == "GET":
         pass
@@ -284,8 +284,8 @@ def deliverymethod_remove(request):
 def contractor_add(request):
     """
 
-    :param request:
-    :return:
+    :param request: HttpRequest - incoming request
+    :return: HttpResponse
     """
     if request.method == "GET":
         pass
@@ -297,8 +297,8 @@ def contractor_add(request):
 def contractor_edit(request):
     """
 
-    :param request:
-    :return:
+    :param request: HttpRequest - incoming request
+    :return: HttpResponse
     """
     if request.method == "GET":
         pass
@@ -310,8 +310,8 @@ def contractor_edit(request):
 def contractor_remove(request):
     """
 
-    :param request:
-    :return:
+    :param request: HttpRequest - incoming request
+    :return: HttpResponse
     """
     if request.method == "GET":
         pass
@@ -323,8 +323,8 @@ def contractor_remove(request):
 def contractor_list(request):
     """
 
-    :param request:
-    :return:
+    :param request: HttpRequest - incoming request
+    :return: HttpResponse
     """
     if request.method == "GET":
         pass
@@ -336,8 +336,8 @@ def contractor_list(request):
 def deliveryaddress_add(request):
     """
 
-    :param request:
-    :return:
+    :param request: HttpRequest - incoming request
+    :return: HttpResponse
     """
     if request.method == "GET":
         pass
@@ -349,8 +349,8 @@ def deliveryaddress_add(request):
 def deliveryaddress_edit(request):
     """
 
-    :param request:
-    :return:
+    :param request: HttpRequest - incoming request
+    :return: HttpResponse
     """
     if request.method == "GET":
         pass
@@ -362,8 +362,8 @@ def deliveryaddress_edit(request):
 def deliveryaddress_remove(request):
     """
 
-    :param request:
-    :return:
+    :param request: HttpRequest - incoming request
+    :return: HttpResponse
     """
     if request.method == "GET":
         pass
@@ -375,8 +375,8 @@ def deliveryaddress_remove(request):
 def deliveryaddress_list(request):
     """
 
-    :param request:
-    :return:
+    :param request: HttpRequest - incoming request
+    :return: HttpResponse
     """
     if request.method == "GET":
         pass
