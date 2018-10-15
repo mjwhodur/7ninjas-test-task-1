@@ -2,16 +2,18 @@
 <module type="PYTHON_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/ninja_shop" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ninja_shop/templates" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/venv" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.6 (7ninjas-test-task-1)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.6 (python36)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Django" />
     <option name="TEMPLATE_FOLDERS">
       <list>
-        <option value="$MODULE_DIR$/ninja/panel/templates" />
+        <option value="$MODULE_DIR$/ninja_shop/panel/templates" />
       </list>
     </option>
   </component>
