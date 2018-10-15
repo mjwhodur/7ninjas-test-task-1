@@ -43,3 +43,8 @@ TODO
 
 ### Google App Engine
 TODO
+
+## Nota bene
+
+### Upgrade to Django 2.x
+Newer versions of Django already support RESTful API and serialization is already bundled in Django 2.0+ APIs.

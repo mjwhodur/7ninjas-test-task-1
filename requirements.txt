@@ -1,5 +1,6 @@
 django<2.0
 djangorestframework
+djangorestframework-jwt
 coreapi
 Markdown>2.1.0
 django-filter>1.0.1
