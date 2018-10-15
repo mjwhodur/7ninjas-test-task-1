@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.db import models
 
 
@@ -74,6 +75,10 @@ class Category(models.Model):
     Title = models.CharField(max_length=100)
 
 
+class Contractor(models.Model):
+    UserName = models.ForeignKey(User)
+
+
 class Order(models.Model):
     """
         Order model
@@ -86,7 +91,7 @@ class Order(models.Model):
     # Contractor
     Number = models.BigIntegerField()
     MethodOfDelivery = models.ForeignKey(DeliveryType)
-    Currency = models.ForeignKey(Currencies)
+    Currency = models.ForeignKey(Currencies, on_delete=models.deletion.PROTECT)
     Timestamp = models.DateTimeField(auto_created=True)
 
 
@@ -100,19 +105,21 @@ class OrderPositions(models.Model):
         The following list consists of positions with selected options and retains the price if the sales assistant
         changes the price after placing order
     """
-    Order = models.ForeignKey(Order)
-    Product = models.ForeignKey(Product)
+    Order = models.ForeignKey(Order, on_delete=models.deletion.CASCADE)
+    Product = models.ForeignKey(Product, on_delete=models.deletion.PROTECT)
     Quantity = models.IntegerField()
     Price = models.FloatField()
 
 
 class WishList(models.Model):
+    Contractor = models.ForeignKey(Contractor, on_delete=models.deletion.CASCADE)
+    Product = models.ForeignKey(Product, on_delete=models.deletion.CASCADE)
+
     """
         Holds wishlist of the products.
 
         User clicks "like" on the product and it gets added to user's wish list.
     """
-    pass
 
 
 class ProductPriceList(models.Model):
@@ -147,4 +154,3 @@ class DeliveryPriceList(models.Model):
     DeliveryMethod = models.ForeignKey(DeliveryType)
     Currency = models.ForeignKey(Currencies)
     Price = models.FloatField()
-
