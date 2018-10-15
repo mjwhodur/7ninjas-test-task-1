@@ -151,6 +151,6 @@ class DeliveryPriceList(models.Model):
         the shop has to automatically handle the conversion process.
 
     """
-    DeliveryMethod = models.ForeignKey(DeliveryType)
-    Currency = models.ForeignKey(Currencies)
+    DeliveryMethod = models.ForeignKey(DeliveryType, on_delete=models.deletion.PROTECT)
+    Currency = models.ForeignKey(Currencies, on_delete=models.deletion.PROTECT)
     Price = models.FloatField()
