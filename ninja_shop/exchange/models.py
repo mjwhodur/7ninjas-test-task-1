@@ -19,6 +19,9 @@ class Product(models.Model):
     Description = models.CharField(max_length=500)
     Price = models.FloatField()
 
+    def __str__(self):
+        return str(self.pk) + " " + self.Title + " Price: " + str(self.Price)
+
 
 class DeliveryType(models.Model):
     """
@@ -35,6 +38,9 @@ class DeliveryType(models.Model):
     PercentValue = models.FloatField()
     Price = models.FloatField()
 
+    def __str__(self):
+        return str(self.pk) + " " + self.Title + " Price: " + str(self.Price)
+
 
 class Category(models.Model):
     """
@@ -43,7 +49,6 @@ class Category(models.Model):
         Nothing big to do a description here. :)
     """
     Title = models.CharField(max_length=100)
-
 
 
 class Order(models.Model):
@@ -56,16 +61,16 @@ class Order(models.Model):
 
     """
     # Contractor
-    Number = models.BigIntegerField()
+    ReferenceNumber = models.CharField(max_length=500, null=True)
     MethodOfDelivery = models.ForeignKey(DeliveryType, on_delete=models.PROTECT)
-    Timestamp = models.DateTimeField(auto_created=True)
-    Product = models.ForeignKey(Product, on_delete=models.PROTECT)
+    Timestamp = models.DateTimeField(auto_now=True)
+    Product = models.ForeignKey(Product, related_name='orders', on_delete=models.PROTECT)
     Count = models.IntegerField(default=1)
-#    Contractor = models.ForeignKey(User, on_delete=models.PROTECT)
+    User = models.ForeignKey('auth.User', on_delete=models.deletion.CASCADE)
 
 
 class WishList(models.Model):
-    user = models.ForeignKey('auth.User', on_delete=models.deletion.CASCADE)
+    user = models.ForeignKey('auth.User', related_name='users', on_delete=models.deletion.CASCADE)
     Product = models.ForeignKey(Product, on_delete=models.deletion.CASCADE)
 
     """
