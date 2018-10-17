@@ -2,37 +2,6 @@ from django.contrib.auth.models import User
 from django.db import models
 
 
-class Currencies(models.Model):
-    """
-        Currency model
-
-        Model for holding information about currency and their exchange rates
-
-        Thanks to Exchange rate application will automatically convert prices to their values i.e.:
-
-            def SetPrice(Product, Currency, value, [list of prices set on form]):
-                Get Currency Exchange rate
-                basePrice = value / Currency.ExchangeRate
-                for currency in Currency.objects.all()
-                    #   ... some important stuff here
-                    #   For each currency the price is set automatically
-                    #   except for prices implicitly set.
-                    #
-                    #
-
-        If user has a shop in Poland, but does not sell in Poland, and sets the price in EURO, not in PLN and sets
-        its exchange rate, the price will be calculated to PLN (base currency with exchange rate == 1) and then
-        converted into each currency supported by the shop, if not set implicitly.
-
-        LesserPlaces : models.IntegerField contains information about how many
-        digits are after dot in the currency. I.e. in PLN or EURO 2, in HUF 2, CHK 1, SEK 0
-    """
-    Name = models.CharField(max_length=500)
-    Mnemonic = models.CharField(max_length=3)
-    ExchangeRate = models.FloatField()
-    LesserPlaces = models.IntegerField()
-
-
 class Product(models.Model):
     """
         Product model
@@ -49,6 +18,7 @@ class Product(models.Model):
     Title = models.CharField(max_length=500)
     Image = models.CharField(max_length=500)
     Description = models.CharField(max_length=500)
+    Price = models.FloatField()
 
 
 class DeliveryType(models.Model):
@@ -64,6 +34,7 @@ class DeliveryType(models.Model):
     Title = models.CharField(max_length=500)
     IsPercent = models.NullBooleanField()
     PercentValue = models.FloatField()
+    Price = models.FloatField()
 
 
 class Category(models.Model):
@@ -76,7 +47,7 @@ class Category(models.Model):
 
 
 class Contractor(models.Model):
-    UserName = models.ForeignKey(User)
+    UserName = models.ForeignKey(User, on_delete=models.CASCADE)
 
 
 class Order(models.Model):
@@ -90,25 +61,10 @@ class Order(models.Model):
     """
     # Contractor
     Number = models.BigIntegerField()
-    MethodOfDelivery = models.ForeignKey(DeliveryType)
-    Currency = models.ForeignKey(Currencies, on_delete=models.deletion.PROTECT)
+    MethodOfDelivery = models.ForeignKey(DeliveryType, on_delete=models.PROTECT)
     Timestamp = models.DateTimeField(auto_created=True)
-
-
-class OrderPositions(models.Model):
-    """
-        Positions of the order model
-
-        Method of delivery does not count on its positions. Total is calculated after summing positions and chosen
-        delivery method.
-
-        The following list consists of positions with selected options and retains the price if the sales assistant
-        changes the price after placing order
-    """
-    Order = models.ForeignKey(Order, on_delete=models.deletion.CASCADE)
-    Product = models.ForeignKey(Product, on_delete=models.deletion.PROTECT)
-    Quantity = models.IntegerField()
-    Price = models.FloatField()
+    Product = models.ForeignKey(Product, on_delete=models.PROTECT)
+    Count = models.IntegerField(default=1)
 
 
 class WishList(models.Model):
@@ -120,37 +76,3 @@ class WishList(models.Model):
 
         User clicks "like" on the product and it gets added to user's wish list.
     """
-
-
-class ProductPriceList(models.Model):
-    """
-        Product price list
-
-        Holds prices regarding different currencies.
-        These values may be automatically calculated
-
-        SetImplicitly field states if price was set directly by the user, so the shop won't affect changes.
-        However, if the user deletes the value, the SetImplicitly flag would be set to False, stating
-        the shop has to automatically handle the conversion process.
-    """
-    Product = models.ForeignKey(Product)
-    Currency = models.ForeignKey(Currencies)
-    Price = models.FloatField()
-    SetImplicitly = models.BooleanField()
-
-
-class DeliveryPriceList(models.Model):
-    """
-        Delivery price list
-
-        Holds prices regarding delivery methods and currencies.
-        These values may be automatically calculated
-
-        SetImplicitly field states if price was set directly by the user, so the shop won't affect changes.
-        However, if the user deletes the value, the SetImplicitly flag would be set to False, stating
-        the shop has to automatically handle the conversion process.
-
-    """
-    DeliveryMethod = models.ForeignKey(DeliveryType, on_delete=models.deletion.PROTECT)
-    Currency = models.ForeignKey(Currencies, on_delete=models.deletion.PROTECT)
-    Price = models.FloatField()

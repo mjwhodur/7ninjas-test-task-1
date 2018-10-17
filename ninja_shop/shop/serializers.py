@@ -1,45 +1,31 @@
 from rest_framework import serializers
-from shop.models import Currencies, Product, DeliveryType, Category, Contractor, Order, OrderPositions, WishList, \
-    ProductPriceList, DeliveryPriceList
+from ninja_shop.shop.models import Product, DeliveryType, Category, Contractor, Order, WishList
 
-class CurrenciesSerializer(serializers.Serializer):
 
-    id = serializers.IntegerField(label='ID', read_only=True)
-    Name = serializers.CharField(required=False, allow_blank=False, allow_null=False, max_length=100)
-    Mnemonic = serializers.CharField(required=False, allow_null=False, allow_blank=False, max_length=3)
-    ExchangeRate = serializers.FloatField(required=True)
-    LesserPlaces = serializers.IntegerField(required=True, allow_null=False)
+class ProductSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Product
+        fields = ('id', 'Title', 'Image', 'Description', 'Price')
 
-    def create(self, validated_data):
-        """
-        Create and return a new Currency, given the validated data
-        :param validated_data:
-        :return:
-        """
-        return Currencies.objects.create(**validated_data)
 
-    def update(self, instance, validated_data):
-        """
-        Update and return an existing 'Currency' instance, given the validated data.
-        :param instance:
-        :param validated_data:
-        :return:
-        """
-        instance.Name = validated_data.get('Name', instance.Name)
-        instance.Mnemonic = validated_data('Mnemonic', instance.Mnemonic)
-        instance.ExchangeRate = validated_data('ExchangeRate', instance.ExchangeRate)
-        instance.LesserPlaces = validated_data('LesserPlaces', instance.LesserPlaces)
-        instance.save()
-        return instance
+class DeliveryTypeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = DeliveryType
+        fields = ('Title', 'IsPercent', 'PercentValue', 'Price')
 
-class ProductSerializer(serializers.Serializer):
-    id = serializers.IntegerField(label='ID', read_only=True)
-    Title = serializers.CharField(allow_blank=False, allow_null=False, max_length=500)
-    Image = serializers.CharField(allow_blank=False, allow_null=False, max_length=500)
-    Description = serializers.CharField(allow_blank=False, allow_null=False, max_length=500)
 
-    def create(self, validated_data):
-        return Product.objects.create(**validated_data)
+class OrderSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Order
+        fields = ('Number', 'MethodOfDelivery', 'Timestamp', 'Product', 'Count')
 
-    def update(self, instance, validated_data):
-        pass
+
+class WishListSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = WishList
+        fields = ('Contractor', 'Product')
+
+
+class CategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Category

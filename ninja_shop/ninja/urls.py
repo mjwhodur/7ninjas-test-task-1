@@ -15,14 +15,15 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from . import views
 
 import api.urls
-import shop.urls
 import panel.urls
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api/', include(api.urls)),
-    url(r'^shop/', include(shop.urls)),
+    #url(r'^shop/', include(shop.urls)),
     url(r'^panel/', include(panel.urls)),
+    url(r'^$', views.DefaultView)
 ]
