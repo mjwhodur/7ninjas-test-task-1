@@ -1,24 +1,19 @@
-from django.shortcuts import render
-
 # Create your views here.
-from rest_framework import generics, permissions, status
+from exchange.models import WishList, Order, Product, Category
+#    def perform_create(self, serializer):
+#        serializer.save()
+from exchange.serializers import ProductSerializer, OrderSerializer, CategorySerializer
+from rest_framework import generics, status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
 
+
 # from shop.models import Product
 # from shop.serializers import ProductSerializer
-
-
 # class PlaceOrder(generics.CreateAPIView):
 #    queryset = Product.objects.all()
 #    serializer_class = ProductSerializer
-
-#    def perform_create(self, serializer):
-#        serializer.save()
-from exchange.serializers import ProductSerializer, OrderSerializer, CategorySerializer
-
-from exchange.models import WishList, Order, Product, Category
 
 
 @api_view(['GET'])
@@ -42,7 +37,7 @@ def api_root(request, format=None):
         'ProductsInCategories': reverse('category-list', request=request, format=format),
         'ProductsInCategoriesByName': reverse('category-detail-by-name', request=request, format=format),
         'Orders': reverse('api-place-order', request=request, format=format),
-        'OAuth2-GitHub': str(reverse('home', request=request, format=format))+"github/",
+        'OAuth2-GitHub': str(reverse('home', request=request, format=format)) + "login/github/",
         'JWT': 'Supported',
         'JWT_Token_Auth_LOCAL_LOGIN': reverse('JWT-Update', request=request, format=format),
         'JWT_Token_Renew': reverse('JWT-Refresh', request=request, format=format),

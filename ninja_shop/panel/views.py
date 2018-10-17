@@ -16,11 +16,10 @@ about views so each controller logic has been put into submodule validators.
 
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib.auth import login, authenticate
-from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 
 # Create your views here.
-from panel.validators import user, deliveryaddress, contractor, deliverymethod, order, prices
+from panel.validators import deliveryaddress, contractor, deliverymethod, order, prices
 
 
 def panel_login(request):
@@ -34,19 +33,21 @@ def panel_login(request):
         if request.user.is_authenticated():
             context['UserEmail'] = request.user.email
             context['UserName'] = request.user.username
-            return render(request, 'panel_welcome.html')
+            return render(request, 'panel/panel_welcome.html')
         else:
             return render(request, 'panel/login.html', context)
     if request.method == "POST":
         user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
         if request.POST.get('username') == '' or request.POST.get('password') == '':
-            return render(request, 'panel/login.html', context={'Error' : 'Please provide username and password'})
+            return render(request, 'panel/login.html', context={'Error': 'Please provide username and password'})
 
         if user is not None:
             login(request, user)
             return redirect('PanelMain')
         else:
-            return render(request, 'panel/login.html', context={'Error' : 'Credentials were not correct. Please try again.'})
+            return render(request, 'panel/login.html',
+                          context={'Error': 'Credentials were not correct. Please try again.'})
+
 
 @staff_member_required
 def category_add(request):
@@ -382,6 +383,7 @@ def deliveryaddress_list(request):
         pass
     if request.method == "POST":
         return deliveryaddress.validate_list(request)
+
 
 @staff_member_required
 def set_prices_for_product(request, product_index):
