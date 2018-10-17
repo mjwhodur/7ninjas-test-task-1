@@ -7,7 +7,9 @@ class ProductSerializer(serializers.HyperlinkedModelSerializer):
     """
 
     """
-    #orders = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
+    categorylist = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
+
+    # orders = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
     # This relation is not needed because we don't want to show
     # all orders to everyone - shopping shall be private
 
@@ -27,6 +29,7 @@ class OrderSerializer(serializers.ModelSerializer):
         We don't provide serialization of User field, because it will be handled automatically in the view: the view
         automatically assigns proper user prohibiting to create order for someone else.
     """
+
     class Meta:
         model = Order
         fields = ('ReferenceNumber', 'MethodOfDelivery', 'Product', 'Count')
@@ -39,6 +42,8 @@ class WishListSerializer(serializers.ModelSerializer):
 
 
 class CategorySerializer(serializers.ModelSerializer):
+    categorylist = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
+
     class Meta:
         model = Category
 

@@ -59,7 +59,7 @@ class PlaceOrder(generics.CreateAPIView):
         serializer.save(User=self.request.user)
 
 @api_view(['GET'])
-def user_list(request, format=None):
+def search_by_name(request, format=None):
     pass
 
 

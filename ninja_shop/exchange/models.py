@@ -78,3 +78,7 @@ class WishList(models.Model):
 
         User clicks "like" on the product and it gets added to user's wish list.
     """
+
+class CategoryList(models.Model):
+    Product = models.ForeignKey(Product, related_name='categorylist', on_delete=models.deletion.CASCADE)
+    Category = models.ForeignKey(Category, related_name='categorylist', on_delete=models.deletion.CASCADE)
