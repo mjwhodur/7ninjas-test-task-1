@@ -21,6 +21,10 @@ from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib.auth import login, authenticate
 from django.shortcuts import render, redirect
 
+from exchange.models import Category
+
+from exchange.models import Product
+
 
 def panel_login(request):
     """
@@ -43,7 +47,7 @@ def panel_login(request):
 
         if user is not None:
             login(request, user)
-            return redirect('PanelMain')
+            return redirect('panel_default')
         else:
             return render(request, 'panel/login.html',
                           context={'Error': 'Credentials were not correct. Please try again.'})
@@ -59,24 +63,19 @@ def product_remove(request, index):
     """
 
     if request.method == "GET":
-        context = {}
-        if request.user.is_authenticated():
-            context['UserEmail'] = request.user.email
-            context['UserName'] = request.user.username
-            return render(request, 'panel/panel_welcome.html')
-        else:
-            return render(request, 'panel/login.html', context)
-    if request.method == "POST":
-        user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
-        if request.POST.get('username') == '' or request.POST.get('password') == '':
-            return render(request, 'panel/login.html', context={'Error': 'Please provide username and password'})
+        try:
+            context = {}
+            context['Product'] = Product.objects.get(pk=index)
+            return render(request, 'panel/remove_product_request.html', context)
+        except:
+            return render(request, 'panel/removal_unsuccessful.html')
 
-        if user is not None:
-            login(request, user)
-            return redirect('PanelMain')
-        else:
-            return render(request, 'panel/login.html',
-                          context={'Error': 'Credentials were not correct. Please try again.'})
+    if request.method == "POST":
+        try:
+            Product.objects.delete(pk=index)
+            return render(request, 'panel/removal_successful.html')
+        except:
+            return render(request, 'panel/removal_unsuccessful.html')
 
 
 @staff_member_required
@@ -187,19 +186,19 @@ def order_remove(request, index):
     :return:
     """
     if request.method == "GET":
-        context = {}
-        pass
-    if request.method == "POST":
-        user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
-        if request.POST.get('username') == '' or request.POST.get('password') == '':
-            return render(request, 'panel/login.html', context={'Error': 'Please provide username and password'})
+        try:
+            context = {}
+            context['Order'] = Order.objects.get(pk=index)
+            return render(request, 'panel/remove.html', context)
+        except:
+            return render(request, 'panel/removal_unsuccessful.html')
 
-        if user is not None:
-            login(request, user)
-            return redirect('PanelMain')
-        else:
-            return render(request, 'panel/login.html',
-                          context={'Error': 'Credentials were not correct. Please try again.'})
+    if request.method == "POST":
+        try:
+            Order.objects.delete(pk=index)
+            return render(request, 'panel/removal_successful.html')
+        except:
+            return render(request, 'panel/removal_unsuccessful.html')
 
 
 @staff_member_required
@@ -323,20 +322,19 @@ def category_remove(request, index):
     :return:
     """
     if request.method == "GET":
-        context = {}
-        pass
+        try:
+            context = {}
+            context['Entity'] = Category.objects.get(pk=index)
+            return render(request, 'panel/remove.html', context)
+        except:
+            return render(request, 'panel/removal_unsuccessful.html')
+
     if request.method == "POST":
-        user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
-        if request.POST.get('username') == '' or request.POST.get('password') == '':
-            return render(request, 'panel/login.html', context={'Error': 'Please provide username and password'})
-
-        if user is not None:
-            login(request, user)
-            return redirect('PanelMain')
-        else:
-            return render(request, 'panel/login.html',
-                          context={'Error': 'Credentials were not correct. Please try again.'})
-
+        try:
+            Category.objects.delete(pk=index)
+            return render(request, 'panel/removal_successful.html')
+        except:
+            return render(request, 'panel/removal_unsuccessful.html')
 
 @staff_member_required
 def category_edit(request, index):
@@ -440,20 +438,19 @@ def delivery_method_remove(request, index):
     :return:
     """
     if request.method == "GET":
-        context = {}
-        pass
+        try:
+            context = {}
+            context['Entity'] = DeliveryType.objects.get(pk=index)
+            return render(request, 'panel/remove.html', context)
+        except:
+            return render(request, 'panel/removal_unsuccessful.html')
+
     if request.method == "POST":
-        user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
-        if request.POST.get('username') == '' or request.POST.get('password') == '':
-            return render(request, 'panel/login.html', context={'Error': 'Please provide username and password'})
-
-        if user is not None:
-            login(request, user)
-            return redirect('PanelMain')
-        else:
-            return render(request, 'panel/login.html',
-                          context={'Error': 'Credentials were not correct. Please try again.'})
-
+        try:
+            DeliveryType.objects.delete(pk=index)
+            return render(request, 'panel/removal_successful.html')
+        except:
+            return render(request, 'panel/removal_unsuccessful.html')
 
 @staff_member_required
 def delivery_method_edit(request, index):

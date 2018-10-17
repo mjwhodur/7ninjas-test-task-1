@@ -16,12 +16,13 @@ Including another URLconf
 import exchange.urls
 import panel.urls
 from django.conf.urls import url, include
+#from django.contrib.sites import admin
 from rest_framework_jwt.views import obtain_jwt_token, refresh_jwt_token, verify_jwt_token
 
 from . import views
 
 urlpatterns = [
-    # url(r'^admin/', admin.site.urls),
+    #url(r'^admin/', admin.site.urls),
     url(r'^api/', include(exchange.urls)),
     url(r'^api-auth/', include('rest_framework.urls')),
     url(r'^api-token-auth/', obtain_jwt_token, name='JWT-Update'),
