@@ -16,9 +16,9 @@ from rest_framework.reverse import reverse
 
 #    def perform_create(self, serializer):
 #        serializer.save()
-from exchange.serializers import ProductSerializer, OrderSerializer
+from exchange.serializers import ProductSerializer, OrderSerializer, CategorySerializer
 
-from exchange.models import WishList, Order, Product
+from exchange.models import WishList, Order, Product, Category
 
 
 @api_view(['GET'])
@@ -37,7 +37,7 @@ def api_root(request, format=None):
     of the curl-like client to try our API.
     """
     return Response({
-        #'users': reverse('user-list', request=request, format=format),
+        # 'users': reverse('user-list', request=request, format=format),
         'products': reverse('api-product-list', request=request, format=format),
         'orders': reverse('api-place-order', request=request, format=format)
     })
@@ -58,15 +58,6 @@ class PlaceOrder(generics.CreateAPIView):
     def perform_create(self, serializer):
         serializer.save(User=self.request.user)
 
-@api_view(['GET'])
-def search_by_name(request, format=None):
-    pass
-
-
-@api_view(['GET'])
-def UserList():
-    return None
-
 
 class ProductList(generics.ListAPIView):
     """
@@ -78,6 +69,7 @@ class ProductList(generics.ListAPIView):
     """
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
+
 
 class ProductDetail(generics.RetrieveAPIView):
     """
@@ -96,6 +88,68 @@ class ProductDetail(generics.RetrieveAPIView):
     """
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
+
+
+class CategoryList(generics.ListAPIView):
+    """
+            # Synopsis
+
+
+            # Actions
+            Append string to the URL to find show details about products in a category
+            i.e. ```api/categories/ByName/Cars ```
+        """
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
+
+
+class CategoryDetail(generics.RetrieveAPIView):
+    """
+        # Synopsis
+
+
+        # Actions
+        Append string to the URL to find show details about products in a category
+        i.e. ```api/categories/ByName/Cars ```
+    """
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
+
+
+class CategoryDetailByName(generics.RetrieveAPIView):
+    """
+        # Synopsis
+
+
+        # Actions
+        Append string to the URL to find show details about products in a category
+        i.e. ```api/categories/ByName/Cars ```
+    """
+    lookup_field = 'Title'
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
+
+    def get_queryset(self):
+        """
+
+        :return:
+        """
+        try:
+            title = self.kwargs['Title'].rstrip('/')
+            print('DEBUG: Title:' + title)
+            return Category.objects.filter(Title=title)
+        except:
+            return Category.objects.all()
+
+
+# @api_view(['GET'])
+# def CategoryDetailByName(request, Title):
+#     title = Title.rstrip('/')
+#     print('DEBUG: Title:' + Title)
+#     category = Category.objects.filter(Title=title)
+#     serializer = CategorySerializer(category)
+#
+#     return Response(serializer.data)
 
 
 @api_view(['POST', 'DELETE'])
@@ -131,7 +185,6 @@ def ProductLike(request, pk):
         except:
             pass
 
-
         try:
             wishlist = WishList()
             wishlist.Product = product
@@ -150,7 +203,17 @@ def ProductLike(request, pk):
             for w in wishlist:
                 w.delete()
             return Response(status=status.HTTP_204_NO_CONTENT)
-        except :
+        except:
             return Response(status=status.HTTP_400_BAD_REQUEST)
 
 
+class CategoryDetailByNameDescription(generics.ListAPIView):
+    """
+        # Synopsis
+
+        # Actions
+        Append string to the URL to find show details about products in a category
+        i.e. ```api/categories/ByName/Cars ```
+    """
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer

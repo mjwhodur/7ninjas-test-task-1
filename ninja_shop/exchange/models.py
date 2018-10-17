@@ -50,6 +50,9 @@ class Category(models.Model):
     """
     Title = models.CharField(max_length=100)
 
+    def __str__(self):
+        return self.Title
+
 
 class Order(models.Model):
     """
@@ -79,6 +82,9 @@ class WishList(models.Model):
         User clicks "like" on the product and it gets added to user's wish list.
     """
 
+
 class CategoryList(models.Model):
     Product = models.ForeignKey(Product, related_name='categorylist', on_delete=models.deletion.CASCADE)
-    Category = models.ForeignKey(Category, related_name='categorylist', on_delete=models.deletion.CASCADE)
+    Category = models.ForeignKey(Category, related_name='products', on_delete=models.deletion.CASCADE)
+    def __str__(self):
+        return self.Product.Title

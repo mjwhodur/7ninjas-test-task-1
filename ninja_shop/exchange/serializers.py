@@ -7,7 +7,7 @@ class ProductSerializer(serializers.HyperlinkedModelSerializer):
     """
 
     """
-    categorylist = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
+    categorylist = serializers.StringRelatedField(many=True, read_only=True)
 
     # orders = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
     # This relation is not needed because we don't want to show
@@ -15,7 +15,7 @@ class ProductSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Product
-        fields = ('id', 'Title', 'Image', 'Description', 'Price',)
+        fields = ('id', 'Title', 'Image', 'Description', 'Price', 'categorylist')
 
 
 class DeliveryTypeSerializer(serializers.ModelSerializer):
@@ -42,10 +42,13 @@ class WishListSerializer(serializers.ModelSerializer):
 
 
 class CategorySerializer(serializers.ModelSerializer):
-    categorylist = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
+    products = serializers.StringRelatedField(many=True, read_only=True)
 
     class Meta:
         model = Category
+        fields = ('Title', 'products')
+        ordering = ('Title',)
+        # Statement seems to have no effect
 
 
 class UserSerializer(serializers.ModelSerializer):
