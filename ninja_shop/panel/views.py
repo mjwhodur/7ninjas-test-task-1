@@ -13,7 +13,8 @@ Also, each view is secured to be viewed only by staff members.
 This file is considered that shall be small and concise and provide basic logic
 about views so each controller logic has been put into submodule validators.
 
-Why Class Views are not used? Because function views are easier to control and are more extensible
+Why Class Views are not used? Because function views are easier to control and are more extensible and allows us
+to use advanced decorators that may be written.
 """
 
 from django.contrib.admin.views.decorators import staff_member_required
@@ -48,80 +49,476 @@ def panel_login(request):
                           context={'Error': 'Credentials were not correct. Please try again.'})
 
 
+@staff_member_required
 def product_remove(request, index):
-    return None
+    """
+
+    :param request:
+    :param index:
+    :return:
+    """
+
+    if request.method == "GET":
+        context = {}
+        if request.user.is_authenticated():
+            context['UserEmail'] = request.user.email
+            context['UserName'] = request.user.username
+            return render(request, 'panel/panel_welcome.html')
+        else:
+            return render(request, 'panel/login.html', context)
+    if request.method == "POST":
+        user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
+        if request.POST.get('username') == '' or request.POST.get('password') == '':
+            return render(request, 'panel/login.html', context={'Error': 'Please provide username and password'})
+
+        if user is not None:
+            login(request, user)
+            return redirect('PanelMain')
+        else:
+            return render(request, 'panel/login.html',
+                          context={'Error': 'Credentials were not correct. Please try again.'})
 
 
+@staff_member_required
 def product_edit(request, index):
-    return None
+    """
+
+    :param request:
+    :param index:
+    :return:
+    """
+    if request.method == "GET":
+        context = {}
+        if request.user.is_authenticated():
+            context['UserEmail'] = request.user.email
+            context['UserName'] = request.user.username
+            return render(request, 'panel/panel_welcome.html')
+        else:
+            return render(request, 'panel/login.html', context)
+    if request.method == "POST":
+        user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
+        if request.POST.get('username') == '' or request.POST.get('password') == '':
+            return render(request, 'panel/login.html', context={'Error': 'Please provide username and password'})
+
+        if user is not None:
+            login(request, user)
+            return redirect('PanelMain')
+        else:
+            return render(request, 'panel/login.html',
+                          context={'Error': 'Credentials were not correct. Please try again.'})
 
 
+@staff_member_required
 def product_view(request, index):
-    return None
+    """
+
+    :param request:
+    :param index:
+    :return:
+    """
+    if request.method == "GET":
+        context = {}
+        pass
+    if request.method == "POST":
+        user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
+        if request.POST.get('username') == '' or request.POST.get('password') == '':
+            return render(request, 'panel/login.html', context={'Error': 'Please provide username and password'})
+
+        if user is not None:
+            login(request, user)
+            return redirect('PanelMain')
+        else:
+            return render(request, 'panel/login.html',
+                          context={'Error': 'Credentials were not correct. Please try again.'})
 
 
+@staff_member_required
 def product_add(request):
-    return None
+    """
+
+    :param request:
+    :return:
+    """
+    if request.method == "GET":
+        context = {}
+        pass
+    if request.method == "POST":
+        user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
+        if request.POST.get('username') == '' or request.POST.get('password') == '':
+            return render(request, 'panel/login.html', context={'Error': 'Please provide username and password'})
+
+        if user is not None:
+            login(request, user)
+            return redirect('PanelMain')
+        else:
+            return render(request, 'panel/login.html',
+                          context={'Error': 'Credentials were not correct. Please try again.'})
 
 
+@staff_member_required
 def product_list(request):
-    return None
+    """
+
+    :param request:
+    :return:
+    """
+    if request.method == "GET":
+        context = {}
+        pass
+    if request.method == "POST":
+        user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
+        if request.POST.get('username') == '' or request.POST.get('password') == '':
+            return render(request, 'panel/login.html', context={'Error': 'Please provide username and password'})
+
+        if user is not None:
+            login(request, user)
+            return redirect('PanelMain')
+        else:
+            return render(request, 'panel/login.html',
+                          context={'Error': 'Credentials were not correct. Please try again.'})
 
 
+@staff_member_required
 def order_remove(request, index):
-    return None
+    """
+
+    :param request:
+    :param index:
+    :return:
+    """
+    if request.method == "GET":
+        context = {}
+        pass
+    if request.method == "POST":
+        user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
+        if request.POST.get('username') == '' or request.POST.get('password') == '':
+            return render(request, 'panel/login.html', context={'Error': 'Please provide username and password'})
+
+        if user is not None:
+            login(request, user)
+            return redirect('PanelMain')
+        else:
+            return render(request, 'panel/login.html',
+                          context={'Error': 'Credentials were not correct. Please try again.'})
 
 
+@staff_member_required
 def order_edit(request, index):
-    return None
+    """
+
+    :param request:
+    :param index:
+    :return:
+    """
+    if request.method == "GET":
+        context = {}
+        pass
+    if request.method == "POST":
+        user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
+        if request.POST.get('username') == '' or request.POST.get('password') == '':
+            return render(request, 'panel/login.html', context={'Error': 'Please provide username and password'})
+
+        if user is not None:
+            login(request, user)
+            return redirect('PanelMain')
+        else:
+            return render(request, 'panel/login.html',
+                          context={'Error': 'Credentials were not correct. Please try again.'})
 
 
+@staff_member_required
 def order_add(request):
-    return None
+    """
 
+    :param request:
+    :return:
+    """
+    if request.method == "GET":
+        context = {}
+        pass
+    if request.method == "POST":
+        user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
+        if request.POST.get('username') == '' or request.POST.get('password') == '':
+            return render(request, 'panel/login.html', context={'Error': 'Please provide username and password'})
+
+        if user is not None:
+            login(request, user)
+            return redirect('PanelMain')
+        else:
+            return render(request, 'panel/login.html',
+                          context={'Error': 'Credentials were not correct. Please try again.'})
+
+
+@staff_member_required
 def order_view(request, index):
-    pass
+    if request.method == "GET":
+        context = {}
+        pass
+    if request.method == "POST":
+        user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
+        if request.POST.get('username') == '' or request.POST.get('password') == '':
+            return render(request, 'panel/login.html', context={'Error': 'Please provide username and password'})
+
+        if user is not None:
+            login(request, user)
+            return redirect('PanelMain')
+        else:
+            return render(request, 'panel/login.html',
+                          context={'Error': 'Credentials were not correct. Please try again.'})
 
 
+@staff_member_required
 def order_list(request):
-    return None
+    """
+
+    :param request:
+    :return:
+    """
+    if request.method == "GET":
+        context = {}
+        pass
+    if request.method == "POST":
+        user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
+        if request.POST.get('username') == '' or request.POST.get('password') == '':
+            return render(request, 'panel/login.html', context={'Error': 'Please provide username and password'})
+
+        if user is not None:
+            login(request, user)
+            return redirect('PanelMain')
+        else:
+            return render(request, 'panel/login.html',
+                          context={'Error': 'Credentials were not correct. Please try again.'})
 
 
+@staff_member_required
 def category_view(request, index):
-    return None
+    """
+
+    :param request:
+    :param index:
+    :return:
+    """
+    if request.method == "GET":
+        context = {}
+        pass
+    if request.method == "POST":
+        user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
+        if request.POST.get('username') == '' or request.POST.get('password') == '':
+            return render(request, 'panel/login.html', context={'Error': 'Please provide username and password'})
+
+        if user is not None:
+            login(request, user)
+            return redirect('PanelMain')
+        else:
+            return render(request, 'panel/login.html',
+                          context={'Error': 'Credentials were not correct. Please try again.'})
 
 
+@staff_member_required
 def category_remove(request, index):
-    return None
+    """
+
+    :param request:
+    :param index:
+    :return:
+    """
+    if request.method == "GET":
+        context = {}
+        pass
+    if request.method == "POST":
+        user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
+        if request.POST.get('username') == '' or request.POST.get('password') == '':
+            return render(request, 'panel/login.html', context={'Error': 'Please provide username and password'})
+
+        if user is not None:
+            login(request, user)
+            return redirect('PanelMain')
+        else:
+            return render(request, 'panel/login.html',
+                          context={'Error': 'Credentials were not correct. Please try again.'})
 
 
+@staff_member_required
 def category_edit(request, index):
-    return None
+    """
+
+    :param request:
+    :param index:
+    :return:
+    """
+    if request.method == "GET":
+        context = {}
+        pass
+    if request.method == "POST":
+        user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
+        if request.POST.get('username') == '' or request.POST.get('password') == '':
+            return render(request, 'panel/login.html', context={'Error': 'Please provide username and password'})
+
+        if user is not None:
+            login(request, user)
+            return redirect('PanelMain')
+        else:
+            return render(request, 'panel/login.html',
+                          context={'Error': 'Credentials were not correct. Please try again.'})
 
 
+@staff_member_required
 def category_add(request):
-    return None
+    """
+
+    :param request:
+    :return:
+    """
+    if request.method == "GET":
+        context = {}
+        pass
+    if request.method == "POST":
+        user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
+        if request.POST.get('username') == '' or request.POST.get('password') == '':
+            return render(request, 'panel/login.html', context={'Error': 'Please provide username and password'})
+
+        if user is not None:
+            login(request, user)
+            return redirect('PanelMain')
+        else:
+            return render(request, 'panel/login.html',
+                          context={'Error': 'Credentials were not correct. Please try again.'})
 
 
+@staff_member_required
 def category_list(request):
-    return None
+    """
+
+    :param request:
+    :return:
+    """
+    if request.method == "GET":
+        context = {}
+        pass
+    if request.method == "POST":
+        user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
+        if request.POST.get('username') == '' or request.POST.get('password') == '':
+            return render(request, 'panel/login.html', context={'Error': 'Please provide username and password'})
+
+        if user is not None:
+            login(request, user)
+            return redirect('PanelMain')
+        else:
+            return render(request, 'panel/login.html',
+                          context={'Error': 'Credentials were not correct. Please try again.'})
 
 
+@staff_member_required
 def delivery_method_view(request, index):
-    return None
+    """
+
+    :param request:
+    :param index:
+    :return:
+    """
+    if request.method == "GET":
+        pass
+    if request.method == "POST":
+        user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
+        if request.POST.get('username') == '' or request.POST.get('password') == '':
+            return render(request, 'panel/login.html', context={'Error': 'Please provide username and password'})
+
+        if user is not None:
+            login(request, user)
+            return redirect('PanelMain')
+        else:
+            return render(request, 'panel/login.html',
+                          context={'Error': 'Credentials were not correct. Please try again.'})
 
 
+@staff_member_required
 def delivery_method_remove(request, index):
-    return None
+    """
+
+    :param request:
+    :param index:
+    :return:
+    """
+    if request.method == "GET":
+        context = {}
+        pass
+    if request.method == "POST":
+        user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
+        if request.POST.get('username') == '' or request.POST.get('password') == '':
+            return render(request, 'panel/login.html', context={'Error': 'Please provide username and password'})
+
+        if user is not None:
+            login(request, user)
+            return redirect('PanelMain')
+        else:
+            return render(request, 'panel/login.html',
+                          context={'Error': 'Credentials were not correct. Please try again.'})
 
 
+@staff_member_required
 def delivery_method_edit(request, index):
-    return None
+    """
+
+    :param request:
+    :param index:
+    :return:
+    """
+    if request.method == "GET":
+        context = {}
+        pass
+    if request.method == "POST":
+        user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
+        if request.POST.get('username') == '' or request.POST.get('password') == '':
+            return render(request, 'panel/login.html', context={'Error': 'Please provide username and password'})
+
+        if user is not None:
+            login(request, user)
+            return redirect('PanelMain')
+        else:
+            return render(request, 'panel/login.html',
+                          context={'Error': 'Credentials were not correct. Please try again.'})
 
 
+@staff_member_required
 def delivery_method_add(request):
-    return None
+    """
+
+    :param request:
+    :return:
+    """
+    if request.method == "GET":
+        context = {}
+        pass
+    if request.method == "POST":
+        user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
+        if request.POST.get('username') == '' or request.POST.get('password') == '':
+            return render(request, 'panel/login.html', context={'Error': 'Please provide username and password'})
+
+        if user is not None:
+            login(request, user)
+            return redirect('PanelMain')
+        else:
+            return render(request, 'panel/login.html',
+                          context={'Error': 'Credentials were not correct. Please try again.'})
 
 
+@staff_member_required
 def delivery_method_list(request):
-    return None
+    """
+
+    :param request:
+    :return:
+    """
+    if request.method == "GET":
+        pass
+    if request.method == "POST":
+        user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
+        if request.POST.get('username') == '' or request.POST.get('password') == '':
+            return render(request, 'panel/login.html', context={'Error': 'Please provide username and password'})
+
+        if user is not None:
+            login(request, user)
+            return redirect('PanelMain')
+        else:
+            return render(request, 'panel/login.html',
+                          context={'Error': 'Credentials were not correct. Please try again.'})
