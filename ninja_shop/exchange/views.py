@@ -33,13 +33,20 @@ def api_root(request, format=None):
     For more information regarding proper API usage, please consult following links. This documentation is interactive
     so you may browse our APIs and try and check the results in a prowser or via ``` curl ``` command.
 
-    You may want to use ``` http ```, command. If so, use ``` pip install httpclient ``` to install most recent version
+    You may want to use ``` http ```, command. If so, use ``` pip install httpie``` to install most recent version
     of the curl-like client to try our API.
     """
     return Response({
         # 'users': reverse('user-list', request=request, format=format),
-        'products': reverse('api-product-list', request=request, format=format),
-        'orders': reverse('api-place-order', request=request, format=format)
+        'Products': reverse('api-product-list', request=request, format=format),
+        'ProductsInCategories': reverse('category-list', request=request, format=format),
+        'ProductsInCategoriesByName': reverse('category-detail-by-name', request=request, format=format),
+        'Orders': reverse('api-place-order', request=request, format=format),
+        'OAuth2-GitHub': str(reverse('home', request=request, format=format))+"github/",
+        'JWT': 'Supported',
+        'JWT_Token_Auth_LOCAL_LOGIN': reverse('JWT-Update', request=request, format=format),
+        'JWT_Token_Renew': reverse('JWT-Refresh', request=request, format=format),
+        'JWT_Token_Verify': reverse('JWT-Verify', request=request, format=format),
     })
 
 

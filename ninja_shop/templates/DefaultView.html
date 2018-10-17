@@ -15,11 +15,11 @@
     </h2>
     <h3>
         Login via Oauth
-        <a class="btn btn-primary"> <span class="glyphicon glyphicon-warning-sign"></span> Login via Oauth</a>
 
     </h3>
     <p>
-        Please note, currently GitHub is only supported.
+    <a class="btn btn-danger disabled" >Login with Google</a>
+    <a class="btn btn-primary" href="{% url 'social:begin' 'github' %}">Login with GitHub</a><br>
     </p>
     <h3>
         API
