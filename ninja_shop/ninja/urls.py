@@ -17,12 +17,13 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from . import views
 
-import api.urls
+import exchange.urls
 import panel.urls
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^api/', include(api.urls)),
+   # url(r'^admin/', admin.site.urls),
+    url(r'^api/', include(exchange.urls)),
+    url(r'^api-auth/', include('rest_framework.urls')),
     #url(r'^shop/', include(shop.urls)),
     url(r'^panel/', include(panel.urls)),
     url(r'^$', views.DefaultView)
