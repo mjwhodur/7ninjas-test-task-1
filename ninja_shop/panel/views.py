@@ -79,7 +79,8 @@ def product_remove(request, index):
 
 
 @staff_member_required
-def product_edit(request, index): #TODO Logic
+def product_edit(request, index):
+    context['Product'] = Product.objects.get(pk=index)
     """
 
     :param request:
@@ -87,24 +88,16 @@ def product_edit(request, index): #TODO Logic
     :return:
     """
     if request.method == "GET":
-        context = {}
-        if request.user.is_authenticated():
-            context['UserEmail'] = request.user.email
-            context['UserName'] = request.user.username
-            return render(request, 'panel/panel_welcome.html')
-        else:
-            return render(request, 'panel/login.html', context)
-    if request.method == "POST":
-        user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
-        if request.POST.get('username') == '' or request.POST.get('password') == '':
-            return render(request, 'panel/login.html', context={'Error': 'Please provide username and password'})
 
-        if user is not None:
-            login(request, user)
-            return redirect('PanelMain')
-        else:
-            return render(request, 'panel/login.html',
-                          context={'Error': 'Credentials were not correct. Please try again.'})
+        return render(request, 'panel/panel_product_edit.html')
+
+    if request.method == "POST":
+        context['Product'].Title = request.POST.get('Title')
+        context['Product'].Image = request.POST.get('Image')
+        context['Product'].Description = request.POST.get('Description')
+        context['Product'].Price = float(request.POST.get('Price'))
+        return render(request, 'panel/edit_success.html')
+
 
 
 @staff_member_required
@@ -118,17 +111,6 @@ def product_view(request, index): #TODO Logic
     if request.method == "GET":
         context = {}
         pass
-    if request.method == "POST":
-        user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
-        if request.POST.get('username') == '' or request.POST.get('password') == '':
-            return render(request, 'panel/login.html', context={'Error': 'Please provide username and password'})
-
-        if user is not None:
-            login(request, user)
-            return redirect('PanelMain')
-        else:
-            return render(request, 'panel/login.html',
-                          context={'Error': 'Credentials were not correct. Please try again.'})
 
 
 @staff_member_required
@@ -304,16 +286,8 @@ def category_view(request, index): #Todo Logic
         context = {}
         context['Categories'] = Category.objects.get(pk=index)
     if request.method == "POST":
-        user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
-        if request.POST.get('username') == '' or request.POST.get('password') == '':
-            return render(request, 'panel/login.html', context={'Error': 'Please provide username and password'})
+        return render(request, 'panel/edit_success.html')
 
-        if user is not None:
-            login(request, user)
-            return redirect('PanelMain')
-        else:
-            return render(request, 'panel/login.html',
-                          context={'Error': 'Credentials were not correct. Please try again.'})
 
 
 @staff_member_required
@@ -333,11 +307,8 @@ def category_remove(request, index):
             return render(request, 'panel/removal_unsuccessful.html')
 
     if request.method == "POST":
-        try:
-            Category.objects.delete(pk=index)
-            return render(request, 'panel/removal_successful.html')
-        except:
-            return render(request, 'panel/removal_unsuccessful.html')
+        return render(request, 'panel/edit_success.html')
+
 
 @staff_member_required
 def category_edit(request, index): #TODO
@@ -352,16 +323,8 @@ def category_edit(request, index): #TODO
         context['Entity'] = Category.objects.get(pk=index)
         pass
     if request.method == "POST":
-        user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
-        if request.POST.get('username') == '' or request.POST.get('password') == '':
-            return render(request, 'panel/login.html', context={'Error': 'Please provide username and password'})
+        return render(request, 'panel/edit_success.html')
 
-        if user is not None:
-            login(request, user)
-            return redirect('PanelMain')
-        else:
-            return render(request, 'panel/login.html',
-                          context={'Error': 'Credentials were not correct. Please try again.'})
 
 
 @staff_member_required
@@ -375,16 +338,7 @@ def category_add(request): #TODO
         context = {}
         pass
     if request.method == "POST":
-        user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
-        if request.POST.get('username') == '' or request.POST.get('password') == '':
-            return render(request, 'panel/login.html', context={'Error': 'Please provide username and password'})
-
-        if user is not None:
-            login(request, user)
-            return redirect('PanelMain')
-        else:
-            return render(request, 'panel/login.html',
-                          context={'Error': 'Credentials were not correct. Please try again.'})
+        return render(request, 'panel/edit_success.html')
 
 
 @staff_member_required
@@ -470,16 +424,8 @@ def delivery_method_edit(request, index): #TODO
         context['Entity'] = DeliveryMethod.objects.get(pk=index)
         pass
     if request.method == "POST":
-        user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
-        if request.POST.get('username') == '' or request.POST.get('password') == '':
-            return render(request, 'panel/login.html', context={'Error': 'Please provide username and password'})
+        return render(request, 'panel/edit_success.html')
 
-        if user is not None:
-            login(request, user)
-            return redirect('PanelMain')
-        else:
-            return render(request, 'panel/login.html',
-                          context={'Error': 'Credentials were not correct. Please try again.'})
 
 
 @staff_member_required
@@ -493,16 +439,8 @@ def delivery_method_add(request): #TODO
         context = {}
         context['Entity'] = DeliveryMethod.objects.get(pk=index)
     if request.method == "POST":
-        user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
-        if request.POST.get('username') == '' or request.POST.get('password') == '':
-            return render(request, 'panel/login.html', context={'Error': 'Please provide username and password'})
+        return render(request, 'panel/edit_success.html')
 
-        if user is not None:
-            login(request, user)
-            return redirect('PanelMain')
-        else:
-            return render(request, 'panel/login.html',
-                          context={'Error': 'Credentials were not correct. Please try again.'})
 
 
 @staff_member_required
