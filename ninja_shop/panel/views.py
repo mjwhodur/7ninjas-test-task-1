@@ -65,13 +65,14 @@ def product_remove(request, index):
         try:
             context = {}
             context['Product'] = Product.objects.get(pk=index)
-            return render(request, 'panel/remove_product_request.html', context)
+            return render(request, 'panel/remove.html', context)
         except:
             return render(request, 'panel/removal_unsuccessful.html')
 
     if request.method == "POST":
         try:
-            Product.objects.delete(pk=index)
+            product = Product.objects.get(pk=index)
+            product.delete()
             return render(request, 'panel/removal_successful.html')
         except:
             return render(request, 'panel/removal_unsuccessful.html')
@@ -106,7 +107,7 @@ def product_view(request, index):
     :return:
     """
     context = {
-        'Product': Product.object.get(pk=index)
+        'Products': Product.object.get(pk=index)
     }
     if request.method == "GET":
         return render(request, 'panel/panel_product_view.html', context=context)
@@ -114,9 +115,6 @@ def product_view(request, index):
 
 @staff_member_required
 def product_add(request):
-    context = {
-        'Product': Product()
-    }
     """
 
     :param request:
@@ -124,12 +122,11 @@ def product_add(request):
     """
     if request.method == "GET":
         return render(request, 'panel/panel_product_add.html')
-
     if request.method == "POST":
-        context['Product'].Title = request.POST.get('Title')
-        context['Product'].Image = request.POST.get('Image')
-        context['Product'].Description = request.POST.get('Description')
-        context['Product'].Price = float(request.POST.get('Price'))
+        product = Product(
+            Title=request.POST.get('Title'), Image=request.POST.get('Image'), Price=request.POST.get('Price'),
+            Description=request.POST.get('Description'))
+        product.save()
         return render(request, 'panel/edit_success.html')
 
 
@@ -144,7 +141,7 @@ def product_list(request):  # Todo logic
         context = {
             'Products': Product.objects.all()
         }
-        return render(request, 'panel/product_list.html')
+        return render(request, 'panel/product_list.html', context)
     if request.method == "POST":
         user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
         if request.POST.get('username') == '' or request.POST.get('password') == '':
