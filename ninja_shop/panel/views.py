@@ -79,7 +79,7 @@ def product_remove(request, index):
 
 
 @staff_member_required
-def product_edit(request, index):
+def product_edit(request, index): #TODO Logic
     """
 
     :param request:
@@ -108,7 +108,7 @@ def product_edit(request, index):
 
 
 @staff_member_required
-def product_view(request, index):
+def product_view(request, index): #TODO Logic
     """
 
     :param request:
@@ -132,7 +132,7 @@ def product_view(request, index):
 
 
 @staff_member_required
-def product_add(request):
+def product_add(request): #Todo Logic
     """
 
     :param request:
@@ -155,7 +155,7 @@ def product_add(request):
 
 
 @staff_member_required
-def product_list(request):
+def product_list(request): #Todo logic
     """
 
     :param request:
@@ -202,7 +202,7 @@ def order_remove(request, index):
 
 
 @staff_member_required
-def order_edit(request, index):
+def order_edit(request, index): #Todo : Logic
     """
 
     :param request:
@@ -211,6 +211,7 @@ def order_edit(request, index):
     """
     if request.method == "GET":
         context = {}
+        context['Order'] = Order.objects.get(pk=index)
         pass
     if request.method == "POST":
         user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
@@ -226,7 +227,7 @@ def order_edit(request, index):
 
 
 @staff_member_required
-def order_add(request):
+def order_add(request): #Todo: Logic
     """
 
     :param request:
@@ -249,9 +250,10 @@ def order_add(request):
 
 
 @staff_member_required
-def order_view(request, index):
+def order_view(request, index): #Todo: Logic
     if request.method == "GET":
         context = {}
+        context['Order'] = Order.objects.get(pk=index)
         pass
     if request.method == "POST":
         user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
@@ -267,7 +269,7 @@ def order_view(request, index):
 
 
 @staff_member_required
-def order_list(request):
+def order_list(request): #Todo Logic
     """
 
     :param request:
@@ -275,6 +277,7 @@ def order_list(request):
     """
     if request.method == "GET":
         context = {}
+        context['Orders'] = Order.objects.all()
         pass
     if request.method == "POST":
         user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
@@ -290,7 +293,7 @@ def order_list(request):
 
 
 @staff_member_required
-def category_view(request, index):
+def category_view(request, index): #Todo Logic
     """
 
     :param request:
@@ -299,7 +302,7 @@ def category_view(request, index):
     """
     if request.method == "GET":
         context = {}
-        pass
+        context['Categories'] = Category.objects.get(pk=index)
     if request.method == "POST":
         user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
         if request.POST.get('username') == '' or request.POST.get('password') == '':
@@ -337,7 +340,7 @@ def category_remove(request, index):
             return render(request, 'panel/removal_unsuccessful.html')
 
 @staff_member_required
-def category_edit(request, index):
+def category_edit(request, index): #TODO
     """
 
     :param request:
@@ -346,6 +349,7 @@ def category_edit(request, index):
     """
     if request.method == "GET":
         context = {}
+        context['Entity'] = Category.objects.get(pk=index)
         pass
     if request.method == "POST":
         user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
@@ -361,7 +365,7 @@ def category_edit(request, index):
 
 
 @staff_member_required
-def category_add(request):
+def category_add(request): #TODO
     """
 
     :param request:
@@ -384,7 +388,7 @@ def category_add(request):
 
 
 @staff_member_required
-def category_list(request):
+def category_list(request): #TODO
     """
 
     :param request:
@@ -392,7 +396,7 @@ def category_list(request):
     """
     if request.method == "GET":
         context = {}
-        pass
+        context['Entity'] = Category.objects.all()
     if request.method == "POST":
         user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
         if request.POST.get('username') == '' or request.POST.get('password') == '':
@@ -407,7 +411,7 @@ def category_list(request):
 
 
 @staff_member_required
-def delivery_method_view(request, index):
+def delivery_method_view(request, index): #TODO
     """
 
     :param request:
@@ -415,7 +419,8 @@ def delivery_method_view(request, index):
     :return:
     """
     if request.method == "GET":
-        pass
+        context = {}
+        context['Entity'] = DeliveryMethod.objects.get(pk=index)
     if request.method == "POST":
         user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
         if request.POST.get('username') == '' or request.POST.get('password') == '':
@@ -430,7 +435,7 @@ def delivery_method_view(request, index):
 
 
 @staff_member_required
-def delivery_method_remove(request, index):
+def delivery_method_remove(request, index): #TODO
     """
 
     :param request:
@@ -453,7 +458,7 @@ def delivery_method_remove(request, index):
             return render(request, 'panel/removal_unsuccessful.html')
 
 @staff_member_required
-def delivery_method_edit(request, index):
+def delivery_method_edit(request, index): #TODO
     """
 
     :param request:
@@ -462,6 +467,7 @@ def delivery_method_edit(request, index):
     """
     if request.method == "GET":
         context = {}
+        context['Entity'] = DeliveryMethod.objects.get(pk=index)
         pass
     if request.method == "POST":
         user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
@@ -477,7 +483,7 @@ def delivery_method_edit(request, index):
 
 
 @staff_member_required
-def delivery_method_add(request):
+def delivery_method_add(request): #TODO
     """
 
     :param request:
@@ -485,7 +491,7 @@ def delivery_method_add(request):
     """
     if request.method == "GET":
         context = {}
-        pass
+        context['Entity'] = DeliveryMethod.objects.get(pk=index)
     if request.method == "POST":
         user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
         if request.POST.get('username') == '' or request.POST.get('password') == '':
@@ -500,14 +506,15 @@ def delivery_method_add(request):
 
 
 @staff_member_required
-def delivery_method_list(request):
+def delivery_method_list(request): #TODO
     """
 
     :param request:
     :return:
     """
     if request.method == "GET":
-        pass
+        context = {}
+        context['Entity'] = DeliveryMethod.objects.all()
     if request.method == "POST":
         user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
         if request.POST.get('username') == '' or request.POST.get('password') == '':
