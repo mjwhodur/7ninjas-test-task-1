@@ -88,7 +88,6 @@ def product_edit(request, index):
     :return:
     """
     if request.method == "GET":
-
         return render(request, 'panel/panel_product_edit.html')
 
     if request.method == "POST":
@@ -99,53 +98,54 @@ def product_edit(request, index):
         return render(request, 'panel/edit_success.html')
 
 
-
 @staff_member_required
-def product_view(request, index): #TODO Logic
+def product_view(request, index):
     """
 
     :param request:
     :param index:
     :return:
     """
+    context = {
+        'Product': Product.object.get(pk=index)
+    }
     if request.method == "GET":
-        context = {}
-        pass
+        return render(request, 'panel/panel_product_view.html', context=context)
 
 
 @staff_member_required
-def product_add(request): #Todo Logic
+def product_add(request):
+    context = {
+        'Product' : Product()
+    }
     """
 
     :param request:
     :return:
     """
     if request.method == "GET":
-        context = {}
-        pass
+        return render(request, 'panel/panel_product_add.html')
+
     if request.method == "POST":
-        user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
-        if request.POST.get('username') == '' or request.POST.get('password') == '':
-            return render(request, 'panel/login.html', context={'Error': 'Please provide username and password'})
-
-        if user is not None:
-            login(request, user)
-            return redirect('PanelMain')
-        else:
-            return render(request, 'panel/login.html',
-                          context={'Error': 'Credentials were not correct. Please try again.'})
+        context['Product'].Title = request.POST.get('Title')
+        context['Product'].Image = request.POST.get('Image')
+        context['Product'].Description = request.POST.get('Description')
+        context['Product'].Price = float(request.POST.get('Price'))
+        return render(request, 'panel/edit_success.html')
 
 
 @staff_member_required
-def product_list(request): #Todo logic
+def product_list(request):  # Todo logic
     """
 
     :param request:
     :return:
     """
     if request.method == "GET":
-        context = {}
-        pass
+        context = {
+            'Products': Product.objects.all()
+        }
+        return render(request, 'panel/product_list.html')
     if request.method == "POST":
         user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
         if request.POST.get('username') == '' or request.POST.get('password') == '':
@@ -169,8 +169,9 @@ def order_remove(request, index):
     """
     if request.method == "GET":
         try:
-            context = {}
-            context['Order'] = Order.objects.get(pk=index)
+            context = {
+                'Order': Order.objects.get(pk=index)
+            }
             return render(request, 'panel/remove.html', context)
         except:
             return render(request, 'panel/removal_unsuccessful.html')
@@ -184,7 +185,7 @@ def order_remove(request, index):
 
 
 @staff_member_required
-def order_edit(request, index): #Todo : Logic
+def order_edit(request, index):  # Todo : Logic
     """
 
     :param request:
@@ -209,7 +210,7 @@ def order_edit(request, index): #Todo : Logic
 
 
 @staff_member_required
-def order_add(request): #Todo: Logic
+def order_add(request):  # Todo: Logic
     """
 
     :param request:
@@ -232,7 +233,7 @@ def order_add(request): #Todo: Logic
 
 
 @staff_member_required
-def order_view(request, index): #Todo: Logic
+def order_view(request, index):  # Todo: Logic
     if request.method == "GET":
         context = {}
         context['Order'] = Order.objects.get(pk=index)
@@ -251,7 +252,7 @@ def order_view(request, index): #Todo: Logic
 
 
 @staff_member_required
-def order_list(request): #Todo Logic
+def order_list(request):  # Todo Logic
     """
 
     :param request:
@@ -275,7 +276,7 @@ def order_list(request): #Todo Logic
 
 
 @staff_member_required
-def category_view(request, index): #Todo Logic
+def category_view(request, index):  # Todo Logic
     """
 
     :param request:
@@ -287,7 +288,6 @@ def category_view(request, index): #Todo Logic
         context['Categories'] = Category.objects.get(pk=index)
     if request.method == "POST":
         return render(request, 'panel/edit_success.html')
-
 
 
 @staff_member_required
@@ -311,7 +311,7 @@ def category_remove(request, index):
 
 
 @staff_member_required
-def category_edit(request, index): #TODO
+def category_edit(request, index):  # TODO
     """
 
     :param request:
@@ -326,9 +326,8 @@ def category_edit(request, index): #TODO
         return render(request, 'panel/edit_success.html')
 
 
-
 @staff_member_required
-def category_add(request): #TODO
+def category_add(request):  # TODO
     """
 
     :param request:
@@ -342,7 +341,7 @@ def category_add(request): #TODO
 
 
 @staff_member_required
-def category_list(request): #TODO
+def category_list(request):  # TODO
     """
 
     :param request:
@@ -365,7 +364,7 @@ def category_list(request): #TODO
 
 
 @staff_member_required
-def delivery_method_view(request, index): #TODO
+def delivery_method_view(request, index):  # TODO
     """
 
     :param request:
@@ -389,7 +388,7 @@ def delivery_method_view(request, index): #TODO
 
 
 @staff_member_required
-def delivery_method_remove(request, index): #TODO
+def delivery_method_remove(request, index):  # TODO
     """
 
     :param request:
@@ -411,8 +410,9 @@ def delivery_method_remove(request, index): #TODO
         except:
             return render(request, 'panel/removal_unsuccessful.html')
 
+
 @staff_member_required
-def delivery_method_edit(request, index): #TODO
+def delivery_method_edit(request, index):  # TODO
     """
 
     :param request:
@@ -427,9 +427,8 @@ def delivery_method_edit(request, index): #TODO
         return render(request, 'panel/edit_success.html')
 
 
-
 @staff_member_required
-def delivery_method_add(request): #TODO
+def delivery_method_add(request):  # TODO
     """
 
     :param request:
@@ -442,9 +441,8 @@ def delivery_method_add(request): #TODO
         return render(request, 'panel/edit_success.html')
 
 
-
 @staff_member_required
-def delivery_method_list(request): #TODO
+def delivery_method_list(request):  # TODO
     """
 
     :param request:

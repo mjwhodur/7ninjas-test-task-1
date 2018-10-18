@@ -32,13 +32,13 @@
                     Shop management
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                    <a class="dropdown-item" href="#">Products</a>
-                    <a class="dropdown-item" href="#">Categories</a>
+                    <a class="dropdown-item" href="{% url 'product-list'%}">Products</a>
+                    <a class="dropdown-item" href="{% url 'categories' %}">Categories</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Orders</a>
-                    <a class="dropdown-item" href="#">Delivery methods</a>
+                    <a class="dropdown-item" href="{% url 'orders-list' %}">Orders</a>
+                    <a class="dropdown-item" href="{% url 'deliverymethods-list' %}">Delivery methods</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Contractors</a>
+                    <a class="dropdown-item disabled" href="#">Contractors</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
@@ -47,10 +47,10 @@
                     Administrator
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                    <a class="dropdown-item" href="#">Contact data</a>
-                    <a class="dropdown-item" href="#">Change password</a>
+                    <a class="dropdown-item disabled" href="#">Contact data</a>
+                    <a class="dropdown-item disabled" href="#">Change password</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Login / Logout</a>
+                    <a class="dropdown-item disabled" href="#">Login / Logout</a>
                 </div>
             </li>
         </ul>
