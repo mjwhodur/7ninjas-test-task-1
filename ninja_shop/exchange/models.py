@@ -34,8 +34,6 @@ class DeliveryType(models.Model):
         IsPercent is type of models.NullBooleanField() temporarily. Not all database systems may support that value.
     """
     Title = models.CharField(max_length=500)
-    IsPercent = models.NullBooleanField()
-    PercentValue = models.FloatField()
     Price = models.FloatField()
 
     def __str__(self):

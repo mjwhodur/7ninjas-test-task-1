@@ -1,0 +1,63 @@
+{% extends 'panel_base.html' %}
+
+{% block content %}
+    <div class="container">
+
+
+        <table>
+            <thead>
+            <tr>
+                <th>
+                    PK
+                </th>
+                <th>
+                    Category Name
+                </th>
+                <th>
+                    Price
+                </th>
+                <th>
+                    Remove
+                </th>
+
+            </tr>
+
+            </thead>
+            <tbody>
+            {% for DeliveryType in Entity %}
+
+                <tr>
+                    <td>
+                        {{ DeliveryType.pk }}
+                    </td>
+                    <td>
+                        {{ DeliveryType.Title }}
+                    </td>
+                    <td>
+                        {{ DeliveryType.Price }}
+                    </td>
+                    <td>
+                        <a class="btn btn-danger" href="{% url 'category-remove' Category.pk  %}"> Remove category </a>
+                    </td>
+                </tr>
+
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <br />
+    <div class="container">
+        <h2>
+            Add
+        </h2>
+        <form method="post" action="{% url 'deliverymethods-add' %}">
+            {% csrf_token %}
+            <label>
+                Name
+                <input type="text" value="Title" name="Title">
+                <input type="text" value="Price" name="Price">
+            </label>
+            <button class="btn btn-primary" type="submit">Add</button>
+        </form>
+    </div>
+{% endblock %}

@@ -22,7 +22,7 @@ from django.contrib.auth import login, authenticate
 from django.shortcuts import render, redirect
 
 from exchange.models import Category
-from exchange.models import Product, Order
+from exchange.models import Product, Order, DeliveryType
 
 
 def panel_login(request):
@@ -263,11 +263,10 @@ def order_list(request):  # Todo Logic
     """
     if request.method == "GET":
         context = {
-            'Orders' : Order.objects.all()
+            'Orders': Order.objects.all()
         }
         for order in context['Orders']:
             order.Total = order.Product.Price * order.Count + order.MethodOfDelivery.Price
-
 
         return render(request, 'panel/order_list.html', context)
     if request.method == "POST":
@@ -387,7 +386,7 @@ def delivery_method_view(request, index):  # TODO
     """
     if request.method == "GET":
         context = {}
-        context['Entity'] = DeliveryMethod.objects.get(pk=index)
+        context['Entity'] = DeliveryType.objects.get(pk=index)
     if request.method == "POST":
         user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
         if request.POST.get('username') == '' or request.POST.get('password') == '':
@@ -435,7 +434,7 @@ def delivery_method_edit(request, index):  # TODO
     """
     if request.method == "GET":
         context = {}
-        context['Entity'] = DeliveryMethod.objects.get(pk=index)
+        context['Entity'] = DeliveryType.objects.get(pk=index)
         pass
     if request.method == "POST":
         return render(request, 'panel/edit_success.html')
@@ -450,8 +449,10 @@ def delivery_method_add(request):  # TODO
     """
     if request.method == "GET":
         context = {}
-        context['Entity'] = DeliveryMethod.objects.get(pk=index)
+        context['Entity'] = DeliveryType.objects.get(pk=index)
     if request.method == "POST":
+        dt = DeliveryType(Title=request.POST.get('Title'), Price=request.POST.get('Price'))
+        dt.save()
         return render(request, 'panel/edit_success.html')
 
 
@@ -463,8 +464,8 @@ def delivery_method_list(request):  # TODO
     :return:
     """
     if request.method == "GET":
-        context = {}
-        context['Entity'] = DeliveryMethod.objects.all()
+        context = {'Entity': DeliveryType.objects.all()}
+        return render(request, template_name='panel/delivery.html', context=context)
     if request.method == "POST":
         user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
         if request.POST.get('username') == '' or request.POST.get('password') == '':
