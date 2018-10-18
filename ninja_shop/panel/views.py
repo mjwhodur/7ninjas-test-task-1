@@ -315,6 +315,9 @@ def category_remove(request, index):
             return render(request, 'panel/removal_unsuccessful.html')
 
     if request.method == "POST":
+        context = {}
+        context['Entity'] = Category.objects.get(pk=index)
+        context['Entity'].delete()
         return render(request, 'panel/edit_success.html')
 
 
@@ -345,6 +348,8 @@ def category_add(request):  # TODO
         context = {}
         pass
     if request.method == "POST":
+        ct = Category(Title=request.POST.get('Title'))
+        ct.save()
         return render(request, 'panel/edit_success.html')
 
 
@@ -358,6 +363,7 @@ def category_list(request):  # TODO
     if request.method == "GET":
         context = {}
         context['Entity'] = Category.objects.all()
+        return render(request, 'panel/category-list.html', context)
     if request.method == "POST":
         user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
         if request.POST.get('username') == '' or request.POST.get('password') == '':
