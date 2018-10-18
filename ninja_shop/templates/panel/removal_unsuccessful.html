@@ -1,0 +1,24 @@
+{% extends 'panel_base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="card bg-success text-white">
+            <div class="card-header">
+                This Entity has not been removed
+            </div>
+            <div class="card-body">
+                <h3>Synopsis</h3>
+                <p>This entity has not been removed. This may be caused by usage in other places or incorrect entity key.
+                    <br /> Check your address, and try again.
+                </p>
+                <h3>Actions</h3>
+
+                <p>You can:</p>
+                <form method="post" action="#">
+                    {% csrf_token %}
+                    <a class="btn btn-primary" href="{% url 'panel_default' %}">Go back</a>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

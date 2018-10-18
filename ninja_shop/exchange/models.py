@@ -20,7 +20,7 @@ class Product(models.Model):
     Price = models.FloatField()
 
     def __str__(self):
-        return str(self.pk) + " " + self.Title + " Price: " + str(self.Price)
+        return str(self.pk) + " " + str(self.Title) + " Price: " + str(self.Price)
 
 
 class DeliveryType(models.Model):
@@ -39,7 +39,7 @@ class DeliveryType(models.Model):
     Price = models.FloatField()
 
     def __str__(self):
-        return str(self.pk) + " " + self.Title + " Price: " + str(self.Price)
+        return str(self.pk) + " " + str(self.Title) + " Price: " + str(self.Price)
 
 
 class Category(models.Model):
@@ -49,6 +49,9 @@ class Category(models.Model):
         Nothing big to do a description here. :)
     """
     Title = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.Title
 
 
 class Order(models.Model):
@@ -61,7 +64,7 @@ class Order(models.Model):
 
     """
     # Contractor
-    ReferenceNumber = models.CharField(max_length=500, null=True)
+    ReferenceNumber = models.CharField(max_length=500, blank=True)
     MethodOfDelivery = models.ForeignKey(DeliveryType, on_delete=models.PROTECT)
     Timestamp = models.DateTimeField(auto_now=True)
     Product = models.ForeignKey(Product, related_name='orders', on_delete=models.PROTECT)
@@ -78,3 +81,11 @@ class WishList(models.Model):
 
         User clicks "like" on the product and it gets added to user's wish list.
     """
+
+
+class CategoryList(models.Model):
+    Product = models.ForeignKey(Product, related_name='categorylist', on_delete=models.deletion.CASCADE)
+    Category = models.ForeignKey(Category, related_name='products', on_delete=models.deletion.CASCADE)
+
+    def __str__(self):
+        return self.Product.Title

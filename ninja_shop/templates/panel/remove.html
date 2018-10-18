@@ -1,0 +1,21 @@
+{% extends 'panel_base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="card bg-danger text-white">
+            <div class="card-header">
+                You are about to remove Product:
+            </div>
+            <div class="card-body">
+                <h3>Product details</h3>
+                <p>{{ Product.Title }}</p>
+                <p>Do you wish to proceed?</p>
+                <form method="post" action="#">
+                    {% csrf_token %}
+                    <button class="btn btn-danger" type="submit">Remove</button>
+                    <a class="btn btn-default" href="{% url 'panel_default' %}">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
