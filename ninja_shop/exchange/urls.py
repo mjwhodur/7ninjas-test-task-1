@@ -14,7 +14,7 @@ urlpatterns = [
     url(r'^categories/byName/(?P<Title>.+)$', views.CategoryDetailByName.as_view()),
     url(r'^categories/byName/$', views.CategoryDetailByNameDescription.as_view(), name='category-detail-by-name'),
     url(r'^categories/(?P<pk>[0-9]+)$', views.CategoryDetail.as_view(), name='category-detail'),
-    url(r'^view/$', views.api_root),
+    url(r'^view/$', views.api_root, name='home'),
     url(r'^', views.api_root, name='api-root'),
 
     #

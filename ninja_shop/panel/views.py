@@ -22,7 +22,7 @@ from django.contrib.auth import login, authenticate
 from django.shortcuts import render, redirect
 
 from exchange.models import Category
-from exchange.models import Product
+from exchange.models import Product, Order
 
 
 def panel_login(request):
