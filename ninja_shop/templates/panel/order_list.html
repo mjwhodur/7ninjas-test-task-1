@@ -1,0 +1,61 @@
+{% extends 'panel_base.html' %}
+
+{% block content %}
+    <div class="container">
+
+        <table>
+            <thead>
+            <tr>
+                <th>
+                    PK
+                </th>
+                <th>
+                    User
+                </th>
+                <th>
+                    Product
+                </th>
+                <th>
+                    Quantity
+                </th>
+                <th>
+                    Total
+                </th>
+                <th>
+                    Method of delivery
+                </th>
+                <th>
+                    Date
+                </th>
+            </tr>
+
+            </thead>
+            <tbody>
+            {% for Order in Orders %}
+
+                <tr>
+                    <td>
+                        {{ Order.pk }}
+                    </td>
+                    <td>
+                        {{ Order.User.email }}
+                    </td>
+                    <td>
+                        {{ Order.Product.Title }}
+                    </td>
+                    <td>
+                        {{ Order.Quantity }}
+                    </td>
+                    <td>
+                        {{ Order.Total }}
+                    </td>
+                    <td> {{ Order.MethodOfDelivery.Title }}</td>
+
+                    <td> {{ Order.Timestamp }}</td>
+                </tr>
+
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

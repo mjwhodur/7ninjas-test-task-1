@@ -22,7 +22,6 @@ from django.contrib.auth import login, authenticate
 from django.shortcuts import render, redirect
 
 from exchange.models import Category
-
 from exchange.models import Product
 
 
@@ -116,7 +115,7 @@ def product_view(request, index):
 @staff_member_required
 def product_add(request):
     context = {
-        'Product' : Product()
+        'Product': Product()
     }
     """
 
@@ -178,14 +177,15 @@ def order_remove(request, index):
 
     if request.method == "POST":
         try:
-            Order.objects.delete(pk=index)
+            order = Order.objects.delete(pk=index)
+            order.delete()
             return render(request, 'panel/removal_successful.html')
         except:
             return render(request, 'panel/removal_unsuccessful.html')
 
 
 @staff_member_required
-def order_edit(request, index):  # Todo : Logic
+def order_edit(request, index):
     """
 
     :param request:
@@ -193,20 +193,23 @@ def order_edit(request, index):  # Todo : Logic
     :return:
     """
     if request.method == "GET":
-        context = {}
-        context['Order'] = Order.objects.get(pk=index)
-        pass
-    if request.method == "POST":
-        user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
-        if request.POST.get('username') == '' or request.POST.get('password') == '':
-            return render(request, 'panel/login.html', context={'Error': 'Please provide username and password'})
+        try:
+            context = {
+                'Order': Order.objects.get(pk=index)
+            }
+        except:
+            context = {
+                'Error': 'Not Found'
+            }
+        return render(request, 'panel/order_edit.html', context)  # TODO TEMPLATE
 
-        if user is not None:
-            login(request, user)
-            return redirect('PanelMain')
-        else:
-            return render(request, 'panel/login.html',
-                          context={'Error': 'Credentials were not correct. Please try again.'})
+    if request.method == "POST":
+        order = Order.objects.get(pk=index)
+        order.Product.pk = request.POST.get('Product')
+        order.Count = int(request.POST.get('Count'))
+        order.MethodOfDelivery.pk = int(request.POST.get('MethodOfDelivery'))
+        order.save()
+        return render(request, 'panel/order_edit_success.html', context)
 
 
 @staff_member_required
@@ -259,9 +262,14 @@ def order_list(request):  # Todo Logic
     :return:
     """
     if request.method == "GET":
-        context = {}
-        context['Orders'] = Order.objects.all()
-        pass
+        context = {
+            'Orders' : Order.objects.all()
+        }
+        for order in context['Orders']:
+            order.Total = order.Product.Price * order.Count + order.MethodOfDelivery.Price
+
+
+        return render(request, 'panel/order_list.html', context)
     if request.method == "POST":
         user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
         if request.POST.get('username') == '' or request.POST.get('password') == '':
